@@ -19,7 +19,7 @@
     "djOnly": "Seuls les DJ peuvent utiliser cette fonction.",
     "notAllowedToJoinBecauseOfGuildSettings": "Je ne suis pas autorisé à rejoindre ce canal vocal en raison des paramètres du serveur.",
     "cooldownMessage": "Vous êtes en période de recharge. Attendez {time} avant d'utiliser à nouveau cette fonction.",
-    "poweredBy": "Propulsé par Betty.cx",
+    "poweredBy": "Propulsé par Betty.bot",
     "invite": "Invite",
     "support": "Soutien",
     "website": "Site web",
@@ -131,7 +131,8 @@
     "queueEnd": "Il n'y a plus de pistes à jouer, le lecteur a été détruit. Utilisez {{command:play}} pour démarrer une nouvelle session !",
     "kickedFromVoiceChannel": "Le joueur a été détruit parce que j'ai été expulsé du canal vocal. Utilisez {{command:play}} pour démarrer une nouvelle session !",
     "emptyVoiceChannelWarning": "Je suis seul dans le canal vocal, le joueur sera détruit dans 2 minutes si personne ne le rejoint.",
-    "emptyVoiceChannel": "Le joueur a été détruit parce que le canal vocal était vide. Utilisez {{command:play}} pour démarrer une nouvelle session !"
+    "emptyVoiceChannel": "Le joueur a été détruit parce que le canal vocal était vide. Utilisez {{command:play}} pour démarrer une nouvelle session !",
+    "notConnected": "Il s'est passé quelque chose de vraiment bizarre. Alors que je ne suis pas connecté à un canal vocal, j'ai un joueur. Ce n'est pas censé se produire. Le joueur a été détruit. Utilisez {{command:play}} pour démarrer une nouvelle session !"
   },
   "songRequestChannel": {
     "topic": {
@@ -146,7 +147,7 @@
       "loopPlayback": "Lecture en boucle",
       "shuffle": "Mélanger la file d'attente"
     },
-    "footer": "Demandé par {username} | Propulsé par Betty.cx",
+    "footer": "Demandé par {username} | Propulsé par Betty.bot",
     "noSongs": "Il n'y a pas de chansons dans la file d'attente. Ajoutez-en avec {{command:play}} ou en @pingant le bot et en tapant le nom ou l'url dans ce canal.",
     "noSongsPlaying": "Aucune chanson n'est jouée.",
     "nextSongs": "Prochaine {number} Chansons",
@@ -215,13 +216,13 @@
       "description": "Commutation du canal vocal."
     },
     "success": "Passage réussi de <#{oldChannel}> à <#{newChannel}>.",
-    "notConnected": "Je ne suis pas connecté à un canal vocal."
+    "notConnected": "Je ne suis pas connecté à un canal vocal.",
+    "alreadyInChannel": "Je suis déjà connecté à cette chaîne."
   },
   "searchCommand": {
     "commandData": {
       "description": "Recherchez une chanson et sélectionnez-la pour l'écouter ou l'ajouter à la file d'attente.",
       "queryOption": "Votre requête pour rechercher une chanson.",
-      "nowOption": "Sélectionnez si vous souhaitez lire le(s) morceau(x) directement ou l'ajouter à la file d'attente.",
       "platformOption": "Sélectionnez la plateforme à partir de laquelle vous souhaitez effectuer une recherche."
     },
     "results": "Voici les résultats de la recherche pour **{query}**.\n\n*Veuillez utiliser le menu déroulant ci-dessous pour sélectionner les chansons à écouter ou pour les ajouter à votre file d'attente.",
@@ -229,7 +230,11 @@
     "emptyQueueWithErrored": "J'ai commencé à jouer {emoji}[**{title}**]({url} \"Ouvre la chanson dans votre navigateur\") et j'ai ajouté **{added}** d'autres chansons à la file d'attente, mais je n'ai pas pu ajouter de chansons **{errored}**.",
     "emptyQueue": "Lancement de la lecture de {emoji}[**{title}**]({url} \"Ouvre la chanson dans votre navigateur\") et ajout de **{added}** chansons supplémentaires à la file d'attente.",
     "successWithErrored": "Ajout des **{added}** chansons à la file d'attente mais pas des **{errored}** chansons.",
-    "success": "Ajout de **{added}** chansons à la file d'attente."
+    "success": "Ajout de **{added}** chansons à la file d'attente.",
+    "queueAll": "Queue all",
+    "resultCount": "Résultats de {count}",
+    "allResults": "Tous les résultats",
+    "cacheError": "Ce message de recherche est trop ancien et le cache a été vidé. Veuillez utiliser à nouveau la commande {{command:search}}."
   },
   "skipCommand": {
     "commandData": {
@@ -460,8 +465,9 @@
     "queue": "File d'attente",
     "nowPlaying": "En cours de lecture",
     "nextSongs": "Chansons suivantes",
-    "footer": "Page {page} de {pages} | Traces dans la file d'attente : {tracks} | Longueur : {length}",
-    "cacheError": "Ce message de file d'attente est trop ancien et le cache a été vidé. Veuillez utiliser à nouveau la commande {{command:queue}}."
+    "footer": "Traces dans la file d'attente : {tracks} | Longueur : {length}",
+    "cacheError": "Ce message de file d'attente est trop ancien et le cache a été vidé. Veuillez utiliser à nouveau la commande {{command:queue}}.",
+    "previous": "Chansons précédentes"
   },
   "playlistCommand": {
     "commandData": {
@@ -504,7 +510,45 @@
     "cacheError": "Ce message de liste de lecture est trop ancien et le cache a été vidé. Veuillez utiliser à nouveau la commande {{command:playlist manage}}.",
     "notEnoughTracksInQueue": "Il n'y a pas assez de titres dans la file d'attente pour créer une liste de lecture. Utilisez {{command:play}} pour ajouter des chansons.",
     "private": "Privé",
-    "public": "Public"
+    "public": "Public",
+    "new": {
+      "overview": {
+        "createdBy": "Créé par",
+        "play": "Jouer",
+        "playDescription": "Ajouter toutes les chansons de la liste de lecture {playlistName} à la file d'attente.",
+        "markPrivate": "Marque privée",
+        "markPrivateDescription": "Marquez la liste de lecture comme privée. Vous êtes alors le seul à pouvoir la voir et l'utiliser.",
+        "markPublic": "Marque publique",
+        "markPublicDescription": "Marquez la liste de lecture comme publique. Tout le monde peut la voir et l'utiliser.",
+        "savePlaylist": "Sauvegarder la liste de lecture",
+        "savePlaylistDescription": "Enregistrez la liste de lecture dans votre bibliothèque pour l'écouter à tout moment.",
+        "unsavePlaylist": "Annuler la sauvegarde de la liste de lecture",
+        "unsavePlaylistDescription": "Supprimez la liste de lecture de votre bibliothèque.",
+        "rename": "Renommer",
+        "renameDescription": "Renommez la liste de lecture en quelque chose de nouveau. (Gardez à l'esprit qu'il doit être unique)",
+        "sharePlaylist": "Partager la liste de lecture",
+        "sharePlaylistDescription": "Utilisez ce lien pour partager la liste de lecture avec d'autres utilisateurs de Betty !",
+        "songsInPlaylist": "Chansons de la liste de lecture : {trackCount}/{maxTracks}"
+      },
+      "dangerZone": {
+        "loseSongs": "Vous perdrez des chansons {trackCount} !",
+        "deletePlaylist": "Supprimer la liste de lecture",
+        "deletePlaylistDescription": "Cette opération supprime la liste de lecture sans retour, soyez prudent.",
+        "transferPlaylist": "Transférer la liste de lecture",
+        "transferPlaylistDescription": "Transférer la liste de lecture à un autre utilisateur sans retour, attention."
+      },
+      "songsTitle": "Chansons",
+      "dangerZoneTitle": "Zone de danger",
+      "share": "Partager",
+      "songs": {
+        "emptyPlaylist": "Cette liste de lecture est vide. Vous pouvez ajouter des chansons en cliquant sur le bouton ci-dessous.",
+        "songsLength": "Longueur : {length}",
+        "clearPlaylist": "Effacer la liste de lecture",
+        "importSpotify": "Importer depuis Spotify",
+        "addSongs": "Ajouter des chansons"
+      },
+      "songsInPlaylist": "Chansons de la liste de lecture : {trackCount}/{maxTracks}"
+    }
   },
   "premiumCommand": {
     "commandData": {

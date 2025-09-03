@@ -19,7 +19,7 @@
     "djOnly": "Bu özelliği sadece DJ'ler kullanabilir.",
     "notAllowedToJoinBecauseOfGuildSettings": "Sunucu ayarları nedeniyle o ses kanalına katılmama izin verilmiyor.",
     "cooldownMessage": "Bekleme süresindesiniz. Bu özelliği tekrar kullanmadan önce lütfen {time} adresinde bekleyin.",
-    "poweredBy": "Betty.cx tarafından desteklenmektedir",
+    "poweredBy": "Betty.bot tarafından desteklenmektedir",
     "invite": "Davetiye",
     "support": "Destek",
     "website": "Web sitesi",
@@ -131,7 +131,8 @@
     "queueEnd": "Çalacak parça kalmadı, oynatıcı yok edildi. Yeni bir oturum başlatmak için {{command:play}} adresini kullanın!",
     "kickedFromVoiceChannel": "Ses kanalından atıldığım için oyuncu yok oldu. Yeni bir oturum başlatmak için {{command:play}} adresini kullanın!",
     "emptyVoiceChannelWarning": "Ses kanalında yalnızım, kimse tekrar katılmazsa oyuncu 2 dakika içinde yok olacak.",
-    "emptyVoiceChannel": "Ses kanalı boş olduğu için oyuncu yok edildi. Yeni bir oturum başlatmak için {{command:play}} adresini kullanın!"
+    "emptyVoiceChannel": "Ses kanalı boş olduğu için oyuncu yok edildi. Yeni bir oturum başlatmak için {{command:play}} adresini kullanın!",
+    "notConnected": "Gerçekten garip bir şey oldu. Bir ses kanalına bağlı olmadığım halde, bir oynatıcım var. Bunun olmaması gerekiyordu. Oyuncu yok edildi. Yeni bir oturum başlatmak için {{command:play}} adresini kullanın!"
   },
   "songRequestChannel": {
     "topic": {
@@ -146,7 +147,7 @@
       "loopPlayback": "Oynatma döngüsü",
       "shuffle": "Kuyruğu karıştırın"
     },
-    "footer": "Tarafından talep edildi {username} | Betty.cx tarafından desteklenmektedir",
+    "footer": "Tarafından talep edildi {username} | Betty.bot tarafından desteklenmektedir",
     "noSongs": "Kuyrukta hiç şarkı yok. Bazılarını {{command:play}} ile veya botu @ping yaparak ve bu kanala adı veya url'yi yazarak ekleyin.",
     "noSongsPlaying": "Hiç şarkı çalmıyor.",
     "nextSongs": "Sonraki {number} Şarkılar",
@@ -215,13 +216,13 @@
       "description": "Ses kanalını değiştirin."
     },
     "success": "<#{oldChannel}>'dan <#{newChannel}>'a başarıyla geçildi.",
-    "notConnected": "Bir ses kanalına bağlı değilim."
+    "notConnected": "Bir ses kanalına bağlı değilim.",
+    "alreadyInChannel": "Ben zaten bu kanala bağlıyım."
   },
   "searchCommand": {
     "commandData": {
       "description": "Bir şarkı arayın ve çalmak için seçin veya kuyruğa ekleyin.",
       "queryOption": "Bir şarkıyı aramak için sorgunuz.",
-      "nowOption": "Şarkı(lar)ı doğrudan çalmak veya kuyruğa eklemek isteyip istemediğinizi seçin.",
       "platformOption": "Arama yapmak istediğiniz platformu seçin."
     },
     "results": "İşte **{query}** için arama sonuçları.\n\n*Oynatılacak şarkıları seçmek veya kuyruğunuza eklemek için lütfen aşağıdaki açılır menüyü kullanın.*",
@@ -229,7 +230,11 @@
     "emptyQueueWithErrored": "{emoji}[**{title}**]({url} \"Şarkıyı tarayıcınızda açar.\") çalmaya başladı ve sıraya **{added}** daha fazla şarkı ekledi ancak **{errored}** şarkılarını ekleyemedi.",
     "emptyQueue": "{emoji}[**{title}**]({url} \"Şarkıyı tarayıcınızda açar.\") çalmaya başladı ve sıraya **{added}** daha fazla şarkı ekledi.",
     "successWithErrored": "Kuyruğa **{added}** şarkıları eklendi ancak **{errored}** şarkıları eklenemedi.",
-    "success": "Kuyruğa **{added}** şarkıları eklendi."
+    "success": "Kuyruğa **{added}** şarkıları eklendi.",
+    "queueAll": "Hepsini takip et",
+    "resultCount": "{count} sonuçları",
+    "allResults": "Tüm Sonuçlar",
+    "cacheError": "Bu arama mesajı çok eski ve önbellek temizlendi. Lütfen {{command:search}} komutunu tekrar kullanın."
   },
   "skipCommand": {
     "commandData": {
@@ -460,8 +465,9 @@
     "queue": "Kuyruk",
     "nowPlaying": "Şimdi Oynatılıyor",
     "nextSongs": "Sonraki Şarkılar",
-    "footer": "Sayfa {page} of {pages} | Kuyruktaki parçalar: {tracks} | Uzunluk: {length}",
-    "cacheError": "Bu kuyruk mesajı çok eski ve önbellek temizlendi. Lütfen {{command:queue}} komutunu tekrar kullanın."
+    "footer": "Kuyruktaki parçalar: {tracks} | Uzunluk: {length}",
+    "cacheError": "Bu kuyruk mesajı çok eski ve önbellek temizlendi. Lütfen {{command:queue}} komutunu tekrar kullanın.",
+    "previous": "Önceki Şarkılar"
   },
   "playlistCommand": {
     "commandData": {
@@ -504,7 +510,45 @@
     "cacheError": "Bu oynatma listesi mesajı çok eski ve önbellek temizlendi. Lütfen {{command:playlist manage}} komutunu tekrar kullanın.",
     "notEnoughTracksInQueue": "Kuyrukta bir çalma listesi oluşturmak için yeterli parça yok. Daha fazla şarkı eklemek için {{command:play}} adresini kullanın.",
     "private": "Özel",
-    "public": "Kamu"
+    "public": "Kamu",
+    "new": {
+      "overview": {
+        "createdBy": "Tarafından oluşturuldu",
+        "play": "Oyun",
+        "playDescription": "{playlistName} çalma listesindeki tüm şarkıları kuyruğa ekleyin.",
+        "markPrivate": "Mark Private",
+        "markPrivateDescription": "Çalma listesini özel olarak işaretleyin. Sadece siz görebilir ve kullanabilirsiniz.",
+        "markPublic": "Mark public",
+        "markPublicDescription": "Çalma listesini herkese açık olarak işaretleyin. Herkes görebilir ve kullanabilir.",
+        "savePlaylist": "Çalma listesini kaydet",
+        "savePlaylistDescription": "İstediğiniz zaman oynatmak için çalma listesini kitaplığınıza kaydedin.",
+        "unsavePlaylist": "Çalma listesi kaydını kaldır",
+        "unsavePlaylistDescription": "Çalma listesini kitaplığınızdan kaldırın.",
+        "rename": "Yeniden Adlandır",
+        "renameDescription": "Çalma listesini yeni bir şeyle yeniden adlandırın. (Benzersiz olması gerektiğini unutmayın)",
+        "sharePlaylist": "Çalma listesini paylaş",
+        "sharePlaylistDescription": "Çalma listesini Betty'deki diğer kullanıcılarla paylaşmak için bu bağlantıyı kullanın!",
+        "songsInPlaylist": "Çalma listesindeki şarkılar: {trackCount}/{maxTracks}"
+      },
+      "dangerZone": {
+        "loseSongs": "{trackCount} şarkılarını kaybedeceksiniz!",
+        "deletePlaylist": "Çalma listesini sil",
+        "deletePlaylistDescription": "Bu işlem çalma listesini geri dönüşü olmayacak şekilde silecektir, dikkatli olun.",
+        "transferPlaylist": "Transfer çalma listesi",
+        "transferPlaylistDescription": "Çalma listesini geri dönüşü olmayan başka bir kullanıcıya aktarın, dikkatli olun."
+      },
+      "songsTitle": "Şarkılar",
+      "dangerZoneTitle": "Tehlike Bölgesi",
+      "share": "Paylaş",
+      "songs": {
+        "emptyPlaylist": "Bu çalma listesi boş. Aşağıdaki düğme ile bazı şarkılar ekleyebilirsiniz.",
+        "songsLength": "Uzunluk: {length}",
+        "clearPlaylist": "Çalma listesini temizle",
+        "importSpotify": "Spotify'dan içe aktar",
+        "addSongs": "Şarkı ekle"
+      },
+      "songsInPlaylist": "Çalma listesindeki şarkılar: {trackCount}/{maxTracks}"
+    }
   },
   "premiumCommand": {
     "commandData": {

@@ -19,7 +19,7 @@
     "djOnly": "Only DJs can use this feature.",
     "notAllowedToJoinBecauseOfGuildSettings": "I'm not allowed to join that voice channel because of the server settings.",
     "cooldownMessage": "You are on cooldown. Please wait {time} before using this feature again.",
-    "poweredBy": "Powered by Betty.cx",
+    "poweredBy": "Powered by Betty.bot",
     "invite": "Invite",
     "support": "Support",
     "website": "Website",
@@ -131,10 +131,11 @@
     "queueEnd": "No more tracks to play, the player got destroyed. Use {{command:play}} to start a new session!",
     "kickedFromVoiceChannel": "The player got destroyed because I got kicked from the voice channel. Use {{command:play}} to start a new session!",
     "emptyVoiceChannelWarning": "I'm alone in the voice channel, the player will get destroyed in 2 minutes if no one joins again.",
-    "emptyVoiceChannel": "The player got destroyed because the voice channel got empty. Use {{command:play}} to start a new session!"
+    "emptyVoiceChannel": "The player got destroyed because the voice channel got empty. Use {{command:play}} to start a new session!",
+    "notConnected": "Something really weird happened. While I'm not connected to a voice channel, I have a player. This is not supposed to happen. The player got destroyed. Use {{command:play}} to start a new session!"
   },
   "songRequestChannel": {
-    "footer": "Requested by {username} | Powered by Betty.cx",
+    "footer": "Requested by {username} | Powered by Betty.bot",
     "noSongs": "There are no songs in the queue. Add some with {{command:play}} or by @pinging the bot and typing the name or the url in this channel.",
     "noSongsPlaying": "There are no songs playing.",
     "nextSongs": "Next {number} Songs",
@@ -215,15 +216,19 @@
       "description": "Switch the voice channel."
     },
     "success": "Successfully switched from <#{oldChannel}> to <#{newChannel}>.",
-    "notConnected": "I'm not connected to a voice channel."
+    "notConnected": "I'm not connected to a voice channel.",
+    "alreadyInChannel": "I'm already connected to this channel."
   },
   "searchCommand": {
     "commandData": {
       "description": "Search for a song and select it to play or add it to the queue.",
       "queryOption": "Your query to search for a song.",
-      "nowOption": "Select if you want to play the song(s) directly or add it to the queue.",
       "platformOption": "Select the platform where you want to search from."
     },
+    "cacheError": "This search message is too old and the cache got cleared. Please use the {{command:search}} command again.",
+    "resultCount": "{count} results",
+    "queueAll": "Queue all",
+    "allResults": "All Results",
     "results": "Here are the search results for **{query}**.\n\n*Please use the drop-down menu below to select songs for playback or to add them to your queue.*",
     "selectPlaceholder": "Choose songs to either play immediately or add to your queue.",
     "emptyQueueWithErrored": "Started playing {emoji}[**{title}**]({url} \"Opens the song in your browser.\") and added **{added}** more songs to the queue but couldn't add **{errored}** songs.",
@@ -458,9 +463,10 @@
     },
     "emptyQueue": "The queue is empty.",
     "queue": "Queue",
+    "previous": "Previous Songs",
     "nowPlaying": "Now Playing",
     "nextSongs": "Next Songs",
-    "footer": "Page {page} of {pages} | Tracks in queue: {tracks} | Length: {length}",
+    "footer": "Tracks in queue: {tracks} | Length: {length}",
     "cacheError": "This queue message is too old and the cache got cleared. Please use the {{command:queue}} command again."
   },
   "playlistCommand": {
@@ -471,6 +477,43 @@
       "descriptionCreateOption": "Create a playlist.",
       "queryOption": "The query to search for a playlist. (Id or Name)",
       "nameOption": "The name of the playlist."
+    },
+    "new": {
+      "songsTitle": "Songs",
+      "dangerZoneTitle": "Danger Zone",
+      "share": "Share",
+      "songsInPlaylist": "Songs in the playlist: {trackCount}/{maxTracks}",
+      "overview": {
+        "createdBy": "Created by",
+        "play": "Play",
+        "playDescription": "Add all songs from the playlist {playlistName} to the queue.",
+        "markPrivate": "Mark private",
+        "markPrivateDescription": "Mark the playlist as private. Only you can see and use it.",
+        "markPublic": "Mark public",
+        "markPublicDescription": "Mark the playlist as public. Everyone can see and use it.",
+        "savePlaylist": "Save playlist",
+        "savePlaylistDescription": "Save the playlist in your library to play it anytime.",
+        "unsavePlaylist": "Unsave playlist",
+        "unsavePlaylistDescription": "Remove the playlist from your library.",
+        "rename": "Rename",
+        "renameDescription": "Rename the playlist in something new. (Keep in mind it need to be unique)",
+        "sharePlaylist": "Share playlist",
+        "sharePlaylistDescription": "Use this link to share the playlist to other users at Betty!"
+      },
+      "dangerZone": {
+        "loseSongs": "You will lose {trackCount} songs!",
+        "deletePlaylist": "Delete playlist",
+        "deletePlaylistDescription": "This will delete the playlist with no return, be careful.",
+        "transferPlaylist": "Transfer playlist",
+        "transferPlaylistDescription": "Transfer the playlist to another user with no return, be careful."
+      },
+      "songs": {
+        "emptyPlaylist": "This playlist is empty. You can add some songs with the button below.",
+        "songsLength": "Length: {length}",
+        "clearPlaylist": "Clear playlist",
+        "importSpotify": "Import from Spotify",
+        "addSongs": "Add songs"
+      }
     },
     "embed": {
       "creator": "**Created by**: {user}",

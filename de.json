@@ -19,7 +19,7 @@
     "djOnly": "Nur DJs können diese Funktion nutzen.",
     "notAllowedToJoinBecauseOfGuildSettings": "Aufgrund der Servereinstellungen kann ich diesem Sprachkanal nicht beitreten.",
     "cooldownMessage": "Sie befinden sich in der Abklingphase. Bitte warte {time}, bevor du diese Funktion wieder benutzt.",
-    "poweredBy": "Powered by Betty.cx",
+    "poweredBy": "Powered by Betty.bot",
     "invite": "Einladung",
     "support": "Unterstützung",
     "website": "Website",
@@ -131,7 +131,8 @@
     "queueEnd": "Keine Tracks mehr zu spielen, der Player wurde zerstört. Verwenden Sie {{command:play}}, um eine neue Sitzung zu beginnen!",
     "kickedFromVoiceChannel": "Der Spieler wurde zerstört, weil ich aus dem Sprachkanal gekickt wurde. Verwenden Sie {{command:play}}, um eine neue Sitzung zu starten!",
     "emptyVoiceChannelWarning": "Ich bin allein im Sprachkanal, der Spieler wird in 2 Minuten zerstört, wenn niemand mehr dazukommt.",
-    "emptyVoiceChannel": "Der Spieler wurde zerstört, weil der Sprachkanal leer wurde. Verwenden Sie {{command:play}}, um eine neue Sitzung zu starten!"
+    "emptyVoiceChannel": "Der Spieler wurde zerstört, weil der Sprachkanal leer wurde. Verwenden Sie {{command:play}}, um eine neue Sitzung zu starten!",
+    "notConnected": "Es ist etwas wirklich Seltsames passiert. Obwohl ich nicht mit einem Sprachkanal verbunden bin, habe ich einen Player. Das sollte eigentlich nicht passieren. Der Spieler wurde zerstört. Verwenden Sie {{command:play}}, um eine neue Sitzung zu starten!"
   },
   "songRequestChannel": {
     "topic": {
@@ -146,7 +147,7 @@
       "loopPlayback": "Schleife der Wiedergabe",
       "shuffle": "Mischen der Warteschlange"
     },
-    "footer": "Angefordert von {username} | Powered by Betty.cx",
+    "footer": "Angefordert von {username} | Powered by Betty.bot",
     "noSongs": "Es sind keine Lieder in der Warteschlange. Füge welche mit {{command:play}} hinzu oder indem du den Bot @pingst und den Namen oder die URL in diesen Kanal eingibst.",
     "noSongsPlaying": "Es werden keine Lieder gespielt.",
     "nextSongs": "Nächste {number} Lieder",
@@ -215,13 +216,13 @@
       "description": "Wechseln Sie den Sprachkanal."
     },
     "success": "Erfolgreicher Wechsel von <#{oldChannel}> zu <#{newChannel}>.",
-    "notConnected": "Ich bin nicht mit einem Sprachkanal verbunden."
+    "notConnected": "Ich bin nicht mit einem Sprachkanal verbunden.",
+    "alreadyInChannel": "Ich bin bereits mit diesem Kanal verbunden."
   },
   "searchCommand": {
     "commandData": {
       "description": "Suche einen Titel, wähle ihn zur Wiedergabe aus oder füge ihn der Warteschlange hinzu.",
       "queryOption": "Ihre Anfrage zur Suche nach einem Lied.",
-      "nowOption": "Wählen Sie, ob Sie den/die Titel direkt abspielen oder zur Warteschlange hinzufügen möchten.",
       "platformOption": "Wählen Sie die Plattform, von der aus Sie suchen möchten."
     },
     "results": "Hier sind die Suchergebnisse für **{query}**.\n\n*Bitte verwenden Sie das Dropdown-Menü unten, um Titel für die Wiedergabe auszuwählen oder sie zu Ihrer Warteschlange hinzuzufügen.",
@@ -229,7 +230,11 @@
     "emptyQueueWithErrored": "Habe angefangen, {emoji}[**{title}**] abzuspielen ({url} \"Öffnet das Lied in Ihrem Browser.\") und **{added}** weitere Lieder zur Warteschlange hinzugefügt, konnte aber keine **{errored}** Lieder hinzufügen.",
     "emptyQueue": "Startet die Wiedergabe von {emoji}[**{title}**]({url} \"Öffnet das Lied in Ihrem Browser.\") und fügt **{added}** weitere Lieder zur Warteschlange hinzu.",
     "successWithErrored": "Hat **{added}** Lieder zur Warteschlange hinzugefügt, konnte aber keine **{errored}** Lieder hinzufügen.",
-    "success": "**{added}** Lieder zur Warteschlange hinzugefügt."
+    "success": "**{added}** Lieder zur Warteschlange hinzugefügt.",
+    "queueAll": "Füge alle hinzu",
+    "resultCount": "{count} ergebnisse",
+    "allResults": "Alle Ergebnisse",
+    "cacheError": "Diese Suchmeldung ist zu alt und der Cache wurde geleert. Bitte verwenden Sie den Befehl {{command:search}} erneut."
   },
   "skipCommand": {
     "commandData": {
@@ -460,8 +465,9 @@
     "queue": "Schwanz",
     "nowPlaying": "Jetzt spielen",
     "nextSongs": "Nächste Lieder",
-    "footer": "Seite {page} von {pages} | Tracks in der Warteschlange: {tracks} | Länge: {length}",
-    "cacheError": "Diese Warteschlangenmeldung ist zu alt und der Cache wurde geleert. Bitte verwenden Sie den Befehl {{command:queue}} erneut."
+    "footer": "Tracks in der Warteschlange: {tracks} | Länge: {length}",
+    "cacheError": "Diese Warteschlangenmeldung ist zu alt und der Cache wurde geleert. Bitte verwenden Sie den Befehl {{command:queue}} erneut.",
+    "previous": "Frühere Lieder"
   },
   "playlistCommand": {
     "commandData": {
@@ -504,7 +510,45 @@
     "cacheError": "Diese Wiedergabelistenmeldung ist zu alt und der Cache wurde geleert. Bitte verwenden Sie den Befehl {{command:playlist manage}} erneut.",
     "notEnoughTracksInQueue": "Es befinden sich nicht genügend Titel in der Warteschlange, um eine Wiedergabeliste zu erstellen. Verwenden Sie {{command:play}}, um weitere Titel hinzuzufügen.",
     "private": "Privat",
-    "public": "Öffentlich"
+    "public": "Öffentlich",
+    "new": {
+      "overview": {
+        "createdBy": "Erstellt von",
+        "play": "Spielen",
+        "playDescription": "Füge alle Lieder aus der Wiedergabeliste {playlistName} zur Warteschlange hinzu.",
+        "markPrivate": "Mark privat",
+        "markPrivateDescription": "Markieren Sie die Wiedergabeliste als privat. Nur Sie können sie sehen und verwenden.",
+        "markPublic": "Öffentlichkeit markieren",
+        "markPublicDescription": "Markieren Sie die Wiedergabeliste als öffentlich. Jeder kann sie sehen und verwenden.",
+        "savePlaylist": "Wiedergabeliste speichern",
+        "savePlaylistDescription": "Speichern Sie die Wiedergabeliste in Ihrer Bibliothek, um sie jederzeit abspielen zu können.",
+        "unsavePlaylist": "Wiedergabeliste nicht speichern",
+        "unsavePlaylistDescription": "Entfernen Sie die Wiedergabeliste aus Ihrer Bibliothek.",
+        "rename": "Umbenennen",
+        "renameDescription": "Benennen Sie die Wiedergabeliste in etwas Neues um. (Denken Sie daran, dass es einzigartig sein muss)",
+        "sharePlaylist": "Wiedergabeliste teilen",
+        "sharePlaylistDescription": "Verwenden Sie diesen Link, um die Wiedergabeliste an andere Benutzer von Betty weiterzugeben!",
+        "songsInPlaylist": "Lieder in der Wiedergabeliste: {trackCount}/{maxTracks}"
+      },
+      "dangerZone": {
+        "loseSongs": "Sie werden {trackCount}-Lieder verlieren!",
+        "deletePlaylist": "Wiedergabeliste löschen",
+        "deletePlaylistDescription": "Dadurch wird die Wiedergabeliste ohne Wiederkehr gelöscht, seien Sie vorsichtig.",
+        "transferPlaylist": "Wiedergabeliste übertragen",
+        "transferPlaylistDescription": "Übertragen Sie die Wiedergabeliste an einen anderen Benutzer ohne Rückgabe, seien Sie vorsichtig."
+      },
+      "songsTitle": "Lieder",
+      "dangerZoneTitle": "Danger Zone",
+      "share": "Teilen Sie",
+      "songs": {
+        "emptyPlaylist": "Diese Wiedergabeliste ist leer. Sie können einige Songs mit der Schaltfläche unten hinzufügen.",
+        "songsLength": "Länge: {length}",
+        "clearPlaylist": "Wiedergabeliste löschen",
+        "importSpotify": "Von Spotify importieren",
+        "addSongs": "Lieder hinzufügen"
+      },
+      "songsInPlaylist": "Lieder in der Wiedergabeliste: {trackCount}/{maxTracks}"
+    }
   },
   "premiumCommand": {
     "commandData": {

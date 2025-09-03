@@ -1,674 +1,718 @@
 {
-	"global": {
-		"premiumRequired": "Para usar este recurso, você precisa ter o {botName} Premium neste servidor. Você pode adquiri-lo em https://betty.bot/premium a partir de US$ 2,50!",
-		"premiumQueueLimitReached": "Você atingiu o limite da fila para usuários gratuitos. É possível adicionar até 1500 músicas na fila. Compre o {botName} Premium em https://betty.bot/premium a partir de US$ 2,50 para aumentar o limite para 100 músicas.",
-		"unknownCommand": "Oh não! Não conheço esse comando. Se este erro persistir, contacte o suporte.",
-		"unknownButton": "Oh não! Não conheço esse botão. Se este erro persistir, contacte a assistência.",
-		"unknownSelectMenu": "Oh não! Não conheço esse menu de seleção. Se este erro persistir, contacte a assistência.",
-		"unknownModal": "Oh não! Não conheço esse modal. Se este erro persistir, contacte a assistência.",
-		"unknownError": "Oh não! Algo correu mal. Se este erro persistir, contacte a assistência.",
-		"serverOnly": "Esta funcionalidade só pode ser utilizada em servidores.",
-		"needVoice": "É necessário estar num canal de voz para utilizar esta funcionalidade.",
-		"cannotJoin": "Não consigo entrar nesse canal de voz. Certifique-se de que tenho as permissões corretas e tente novamente.",
-		"noPlayer": "Não há nenhum jogador neste servidor. Usa {{command:join}} para criar um!",
-		"emptyQueue": "A fila de espera está vazia. Use {{command:play}} para adicionar algumas músicas!",
-		"notSameVoiceChannel": "Para utilizar esta funcionalidade, é necessário estar no mesmo canal de voz que eu.",
-		"notInSongRequestChannelUseAble": "Não é possível utilizar este comando dentro do canal de pedido de música.",
-		"botNoPermission": "Não tenho as permissões necessárias para executar esta ação. Preciso da permissão {missingPerms} neste canal. Certifique-se de que tenho as permissões corretas e tente novamente.",
-		"userNoPermission": "Não tem as permissões necessárias para executar esta ação. Precisa da permissão {missingPerms} neste canal.",
-		"djOnly": "Apenas os DJs podem utilizar esta funcionalidade.",
-		"notAllowedToJoinBecauseOfGuildSettings": "Não me é permitido entrar nesse canal de voz devido às definições do servidor.",
-		"cooldownMessage": "Está a arrefecer. Espera {tempo} antes de voltares a utilizar esta funcionalidade.",
-		"poweredBy": "Criado por betty.bot",
-		"invite": "Convite",
-		"support": "Apoio",
-		"website": "Site Web",
-		"subscriptions": "Gerir subscrições",
-		"premium": "Premium",
-		"listenHere": "Ouvir aqui",
-		"nowPlaying": "A reproduzir agora **{songName} - {artist}**",
-		"playing": "A reproduzir {songName} - {artist}",
-		"requestedBy": "Solicitado por {requester}",
-		"nextSong": "A próxima música é **{songName}**",
-		"autoPlayInfo": "Começando a reproduzir músicas recomendadas. Para obter novas recomendações, limpe a fila de espera.",
-		"autoPlayFooter": "Através do Autoplay",
-		"premiumThankYou": "Obrigado por comprar a versão premium do {botName}! Agora pode usar todas as funcionalidades premium em {serverName}!",
-		"premiumThankYouCustomBot": "Obrigado por comprar um bot personalizado para {botName}! Pode começar diretamente com a configuração no painel de controlo!",
-		"premiumPaymentFailed": "Uma das suas subscrições em {botName} falhou devido a um problema de pagamento. Por favor, verifique os seus métodos de pagamento. Como resultado, o seu estatuto de prémio foi removido. Se a próxima tentativa de pagamento for bem sucedida, o seu prémio será restabelecido.",
-		"guildJoinDm": "### Olá!\n\nObrigado por adicionar o {botName} ao seu servidor! 🎉\n\nVamos começar:\n\n- **Personalize o {botName}:** [Painel de Controle](https://betty.bot/dash/{server}/{bot})\n- **Tocar Música:** {{command:play}}\n\nQuer mais do {botName}? Confira o [{botName} Premium](https://betty.bot) para recursos extras!\n\nAproveite!",
-		"nothingFound": "Não consegui encontrar nada para essa pesquisa.",
-		"noPlayerFound": "Não consegui encontrar ou criar um jogador para este servidor. Por favor, tente novamente mais tarde.",
-		"devOnly": "Este bot está atualmente em modo de desenvolvimento e apenas o programador pode utilizar o bot. Por favor, junte-se ao servidor de suporte para mais informações.",
-		"noSpotifyConnection": "Não tens uma conta Spotify ligada a {botName}. Use o comando {{command:spotify login}} para conectar sua conta.",
-		"noTidalConnection": "Não tem uma conta Tidal ligada a {botName}. Use o comando {{command:tidal login}} para ligar a sua conta.",
-		"firstPage": "Primeira página",
-		"previousPage": "Página anterior",
-		"nextPage": "Página seguinte",
-		"lastPage": "Última página",
-		"selectLikeType": "Onde gostaria de adicionar a música à sua lista de favoritos - Discord, Spotify ou Deezer?",
-		"serverBlacklisted": "Este servidor está na lista negra e não pode usar {botName}. Se acha que isto é um erro, por favor contacte o suporte.",
-		"unlikedSong": "Já gostaste da faixa **{title}**, por isso removi-a.",
-		"likedSong": "Gostei da faixa **{título}**.",
-		"boostPremium": "Melhore o seu servidor com premium!",
-		"songAlreadyInQueue": "A música **{title}** já está na fila de espera e, devido às definições do servidor, não a posso adicionar novamente.",
-		"responseEmptyAfterFilter": "Os resultados estão vazios após o filtro de prevenção de músicas duplicadas. Tente novamente com uma consulta diferente.",
-		"serverNotWhitelisted": "Este servidor não está na lista de permissões e não pode usar este bot personalizado de {botName}. Se é o proprietário do bot personalizado, por favor use o painel de controlo para colocar o servidor na lista branca.",
-		"autoPlayAlreadyEnabled": "A funcionalidade de reprodução automática já está activada. Para a desativar, visite o painel de controlo.",
-		"autoPlayEnabled": "A funcionalidade de reprodução automática foi activada. Para a desativar novamente, visite o painel de controlo.",
-		"notMySong": "**Esta não é a tua música? **\nSe o bot não encontrou exatamente a música que queres reproduzir, tenta estas formas:\n1. Tenta adicionar a música pelo link da música. (Ex. do Spotify)\n2. Tenta adicionar a música pelo título - artista. (Ex. Believer - Imagine Dragons)\n3. Tenta encontrar a música com o comando {{command:search}}.",
-		"queueLimitReached": "Atingiu o limite de fila definido de **{limite}** para este servidor. Aguarde até que algumas músicas sejam reproduzidas ou removidas da fila antes de adicionar novas músicas.",
-		"queueUserLimitReached": "Atingiu o limite de fila definido de **{limite}** para si. Aguarde até que algumas músicas sejam reproduzidas ou removidas da fila antes de adicionar novas músicas.",
-		"empty": "Vazio",
-		"noLavalink": "Nenhum servidor de áudio de {botName} está atualmente disponível. Por favor, tente novamente mais tarde. Se este erro persistir, contacte o suporte.",
-		"restartInfo": "O bot foi reiniciado devido a uma atualização. {botName} agora reconecta todos os jogadores existentes. Por favor, espera alguns segundos até o bot estar novamente pronto.",
-		"spotifyWarning": "Uma vez que o {botName} ainda não foi verificado pelo Spotify, a integração do {botName} com o Spotify quase sempre falha porque eles exigem que adicionemos todos os usuários por e-mail e nome completo no painel do desenvolvedor. Isto não é possível para nós devido a razões de privacidade. Estamos a trabalhar numa solução para resolver este problema.",
-		"notAllowedInRadioMode": "Esta funcionalidade não é permitida enquanto o bot estiver no modo rádio.",
-		"nowPlayingRadio": "O bot mudou para o modo rádio. A reproduzir o **{rádio}** do hoster **{hoster}**.",
-		"currentlyPlayingRadio": "Atualmente a reproduzir **{radio}** do anfitrião **{hoster}**."
-	},
-	"nonPremiumTips": {
-		"tip1": "Sabia que pode obter uma melhor qualidade de áudio com o betty premium? <https://betty.bot/premium>",
-		"tip2": "Sabia que pode ligar a sua conta Spotify ao {botName} para importar listas de reprodução facilmente?",
-		"tip3": "Sabia que pode limpar automaticamente a fila de espera se um membro abandonar o canal de voz com {botName} premium? <https://betty.bot/premium>",
-		"tip4": "Sabias que podes obter outro {botName} com premium para o teu servidor? <https://betty.bot/premium>",
-		"tip5": "Sabia que pode impedir a duplicação de músicas na fila de espera com o {botName} premium? <https://betty.bot/premium>",
-		"tip6": "Sabia que pode obter recomendações com base no seu histórico de audição com {{command:recommend}}?",
-		"tip7": "Sabias que {botName} tem um painel de controlo onde podes configurar o bot para o teu servidor? <https://betty.bot/dash>",
-		"tip8": "Sabia que pode ativar uma funcionalidade chamada DJ Temporário? Isto permite que o criador do leitor aceda aos comandos de DJ sem a função de DJ. Configure-o aqui: <https://betty.bot/dash>!",
-		"tip9": "Sabia que pode ter uma interface ligeira para {botName} em canais de voz temporários? Pode activá-la no painel de controlo.",
-		"tip10": "Está a ouvir um som com interrupções ou atrasos no áudio? Compre premium e tenha acesso a servidores de áudio de alta qualidade."
-	},
-	"timeUnits": {
-		"multiple": {
-			"days": "dias",
-			"hours": "horas",
-			"minutes": "minutos",
-			"seconds": "segundos"
-		},
-		"single": {
-			"days": "dia",
-			"hours": "hora",
-			"minutes": "minuto",
-			"seconds": "segundo"
-		}
-	},
-	"buttonLabels": {
-		"support": "Aderir ao servidor de apoio",
-		"customBotDashboard": "Painel de controlo personalizado do bot",
-		"loop": "Loop",
-		"remove": "Remover",
-		"shuffle": "Fila aleatória",
-		"savequeueasplaylist": "Guardar a fila como lista de reprodução",
-		"savehistoryasplaylist": "Guardar o histórico como lista de reprodução",
-		"playhistory": "Histórico de reprodução",
-		"clearhistory": "Limpar histórico",
-		"enableautoplay": "Obter fila de espera infinita, ativar a reprodução automática.",
-		"thatsnotmysong": "Não foi essa a música que pedi?",
-		"playerlogs": "Ver os registos dos jogadores",
-		"addsong": "Adicionar uma música",
-		"stopRadio": "Parar o rádio",
-		"searchOnSpotify": "Pesquisar no Spotify",
-		"playlist": {
-			"manageplaylistsongs": "Gerir / Ver canções",
-			"renameplaylist": "Renomear",
-			"toggleprivateplaylist": "Alternar Privado",
-			"playplaylist": "Reproduzir Lista de reprodução",
-			"deleteplaylist": "Apagar lista de reprodução",
-			"transfareplaylist": "Transfare Playlist",
-			"importspotifyplaylist": "Importar músicas do Spotify",
-			"playlistremovesong": "Selecione as músicas que pretende remover.",
-			"addsongtoplaylist": "Adicionar uma música à lista de reprodução",
-			"backtoplaylist": "Voltar à lista de reprodução",
-			"shareplaylist": "Partilhar lista de reprodução",
-			"saveplaylist": "Guardar lista de reprodução"
-		},
-		"joinchannel": "Junte-se ao seu canal de voz atual"
-	},
-	"destoryReasons": {
-		"inactive": "O jogador foi destruído porque esteve inativo durante muito tempo. Usa {{command:play}} para começar uma nova sessão!",
-		"errored": "O jogador foi destruído devido a um erro. Se esta não for a primeira vez nas últimas 2h, contacta o suporte. Usa {{command:play}} para começar uma nova sessão!",
-		"queueEndWarning": "Não há mais músicas para tocar. Usa {{command:play}} para adicionar mais! Se não forem adicionadas novas faixas, o leitor será destruído em 2 minutos.",
-		"queueEnd": "Não há mais faixas para tocar, o jogador foi destruído. Usa {{command:play}} para começar uma nova sessão!",
-		"kickedFromVoiceChannel": "O jogador foi destruído porque fui expulso do canal de voz. Usa {{command:play}} para começar uma nova sessão!",
-		"emptyVoiceChannelWarning": "Estou sozinho no canal de voz, o jogador será destruído em 2 minutos se ninguém voltar a juntar-se.",
-		"emptyVoiceChannel": "O jogador foi destruído porque o canal de voz ficou vazio. Usa {{command:play}} para começar uma nova sessão!"
-	},
-	"songRequestChannel": {
-		"footer": "Pedido por {username} | Criado por betty.bot",
-		"noSongs": "Não há músicas na fila. Adicione algumas com {{command:play}} ou mencionando o bot e digitando o nome ou o URL neste canal.",
-		"noSongsPlaying": "Não há músicas tocando.",
-		"nextSongs": "Próximas {number} músicas",
-		"nextSong": "Próxima música",
-		"channelName": "pedidos-de-musica",
-		"loadingMessage": "Construindo o canal de pedidos de música...",
-		"emptyQuery": "Por favor, forneça uma consulta válida. Lembre-se de que você precisa me mencionar, caso contrário, não consigo ver sua mensagem.",
-		"topic": {
-			"rewind": "Voltar 10 segundos",
-			"pauseResume": "Pausar/Continuar reprodução",
-			"stop": "Parar",
-			"forward": "Avançar 10 segundos",
-			"skip": "Pular a música atual",
-			"volumeDown": "Volume -10%",
-			"volumeUp": "Volume +10%",
-			"grabSong": "Pegar a música atual",
-			"loopPlayback": "Repetir reprodução",
-			"shuffle": "Embaralhar a fila"
-		},
-		"lightInterfaceTitle": "Interface Leve do {botname}",
-		"lightInterfaceFooter": "O {botName} não interage com nenhuma mensagem enviada neste canal. Você só pode usar os botões para controlar o player."
-	},
-	"supportCommand": {
-		"commandData": {
-			"description": "Obtenha o link para o servidor de suporte."
-		},
-		"response": "Você pode entrar no servidor de suporte aqui: {url}"
-	},
-	"translateCommand": {
-		"commandData": {
-			"description": "Quer nos ajudar a traduzir o {botName} para o seu idioma?"
-		},
-		"response": "Você quer nos ajudar a traduzir o {botName} para o seu idioma? Você pode fazer isso no nosso repositório de traduções no GitHub: [{botName} Translation Repo](https://github.com/fb-sean/betty-music-bot-translations \"Abre o repositório de traduções do {botName} no GitHub\")"
-	},
-	"playCommand": {
-		"commandData": {
-			"description": "Toque uma música ou adicione à fila por link ou nome.",
-			"queryOption": "Sua busca para procurar uma música ou um link para uma música.",
-			"nowOption": "Selecione se deseja tocar a música diretamente ou adicioná-la à fila.",
-			"nextOption": "Selecione se deseja tocar como a próxima música na fila.",
-			"platformOption": "Selecione a plataforma na qual deseja procurar.",
-			"fileOption": "Use esta opção para enviar um arquivo para tocar. O arquivo deve ser um arquivo de áudio válido."
-		},
-		"invalidFile": "O arquivo que você enviou não é um arquivo de áudio válido. Certifique-se de que seja um arquivo mp3 válido e tente novamente.",
-		"playlistNowError": "Você não pode tocar uma playlist diretamente quando já há músicas na fila.",
-		"filePlaySuccessfully": "Arquivo com o nome **{title}** adicionado à fila na posição **{position}**.",
-		"filePlaySuccessfullyNow": "Começou a tocar o arquivo **{title}**.",
-		"trackPlaySuccessfully": "Adicionada {emoji}[**{title}**]({url} \"Abre a música no seu navegador.\") à fila na posição **{position}**.",
-		"trackPlaySuccessfullyNonPremium": "Adicionada {emoji}[**{title}**]({url} \"Abre a música no seu navegador.\") à fila na posição **{position}**. Enquanto espera sua música tocar, que tal votar no {botName}? Isso nos ajuda a crescer e melhorar o bot. [Vote no {botName}](https://top.gg/bot/884800931819048980/vote)",
-		"trackPlaySuccessfullyNow": "Começou a tocar {emoji}[**{title}**]({url} \"Abre a música no seu navegador.\").",
-		"playlistPlaySuccessfully": "Playlist [**{title}**]({url} \"Abre a playlist no seu navegador.\") adicionada à fila.",
-		"playlistPlaySuccessfullyNow": "Começou a tocar a playlist [**{title}**]({url} \"Abre a playlist no seu navegador.\")."
-	},
-	"joinCommand": {
-		"commandData": {
-			"description": "Entrar no canal de voz em que você está."
-		},
-		"success": "Entrei com sucesso em <#{channel}>.",
-		"alreadyConnected": "Já estou conectado a um canal de voz."
-	},
-	"disconnectCommand": {
-		"commandData": {
-			"description": "Desconectar do canal de voz."
-		},
-		"success": "Desconectado com sucesso do canal de voz.",
-		"notConnected": "Não estou conectado a nenhum canal de voz."
-	},
-	"stopCommand": {
-		"commandData": {
-			"description": "Parar o player e limpar a fila."
-		},
-		"success": "Player parado e fila limpa.",
-		"removedVote": "Seu voto para parar o player foi removido.",
-		"addedVote": "Seu voto para parar o player foi adicionado ({votes}/{requiredVotes})."
-	},
-	"switchCommand": {
-		"commandData": {
-			"description": "Mudar de canal de voz."
-		},
-		"success": "Mudei com sucesso de <#{oldChannel}> para <#{newChannel}>.",
-		"notConnected": "Não estou conectado a nenhum canal de voz."
-	},
-	"searchCommand": {
-		"commandData": {
-			"description": "Procurar uma música e selecioná-la para tocar ou adicioná-la à fila.",
-			"queryOption": "Sua consulta para procurar uma música.",
-			"nowOption": "Selecione se deseja tocar a(s) música(s) diretamente ou adicioná-la(s) à fila.",
-			"platformOption": "Selecione a plataforma onde deseja procurar."
-		},
-		"results": "Aqui estão os resultados da pesquisa para **{query}**.\n\n*Use o menu suspenso abaixo para selecionar músicas para reprodução ou adicioná-las à sua fila.*",
-		"selectPlaceholder": "Escolha músicas para tocar imediatamente ou adicionar à sua fila.",
-		"emptyQueueWithErrored": "Comecei a tocar {emoji}[**{title}**]({url} \"Abre a música no navegador\") e adicionei **{added}** músicas à fila, mas não foi possível adicionar **{errored}** músicas.",
-		"emptyQueue": "Comecei a tocar {emoji}[**{title}**]({url} \"Abre a música no navegador\") e adicionei **{added}** músicas à fila.",
-		"successWithErrored": "Adicionei **{added}** músicas à fila, mas não foi possível adicionar **{errored}** músicas.",
-		"success": "Adicionei **{added}** músicas à fila."
-	},
-	"skipCommand": {
-		"commandData": {
-			"description": "Pular a música atual ou mais músicas.",
-			"skipToOption": "O número de músicas a pular. (Voto para pular não suporta isso!)"
-		},
-		"noSongPlaying": "Não há nenhuma música tocando, então não posso pular nada.",
-		"skippedMultipleSongs": "Pulei com sucesso **{count}** músicas.",
-		"skippedCurrentSong": "Pulei com sucesso **[{title}]({url})**.",
-		"removedVote": "Seu voto para pular a música atual foi removido.",
-		"addedVote": "Seu voto para pular a música atual foi adicionado ({votes}/{requiredVotes}).",
-		"skippingMoreSongsThanQueue": "Você não pode pular mais músicas do que há na fila."
-	},
-	"spotifyCommand": {
-		"commandData": {
-			"description": "Gerencie a conexão da sua conta do Spotify com o {botName}.",
-			"loginOption": "Conectar à sua conta do Spotify.",
-			"logoutOption": "Desconectar da sua conta do Spotify."
-		},
-		"loginLink": "[Clique aqui para conectar sua conta do Spotify ao {botName}.]({url} \"Abre a página de login do Spotify para autenticação com o {botName}\")",
-		"openLinkButton": "Abrir",
-		"logoutSuccess": "Sua conta do Spotify foi desconectada com sucesso.",
-		"loginSuccess": "Sua conta do Spotify foi conectada com sucesso.",
-		"noSpotifyTrack": "Não consegui encontrar uma faixa para essa consulta no Spotify.",
-		"failedLike": "Falha ao curtir a faixa no Spotify. Se o erro persistir, entre em contato com o suporte.",
-		"likedSong": "Curti a faixa **{title}** no Spotify.",
-		"failedRemoveLike": "Falha ao remover o curtir da faixa no Spotify. Se o erro persistir, entre em contato com o suporte.",
-		"alreadyLiked": "Você já tinha curtido a faixa **{title}** no Spotify, então eu removi o curtir."
-	},
-	"tidalCommand": {
-		"commandData": {
-			"description": "Gerencie a conexão da sua conta do Tidal com o {botName}.",
-			"loginOption": "Conectar à sua conta do Tidal.",
-			"logoutOption": "Desconectar da sua conta do Tidal."
-		},
-		"loginLink": "[Clique aqui para conectar sua conta do Tidal ao {botName}.]({url} \"Abre a página de login do Tidal para autenticação com o {botName}\")",
-		"openLinkButton": "Abrir",
-		"logoutSuccess": "Sua conta do Tidal foi desconectada com sucesso.",
-		"loginSuccess": "Sua conta do Tidal foi conectada com sucesso."
-	},
-	"fixCommand": {
-		"commandData": {
-			"description": "Corrigir o player caso ele não esteja funcionando corretamente."
-		},
-		"success": "A região do servidor de voz foi atualizada com sucesso para **Roterdã**, que é a mais próxima do {botName}."
-	},
-	"pauseCommand": {
-		"commandData": {
-			"description": "Pausar a reprodução atual."
-		},
-		"alreadyPaused": "A reprodução já está pausada. Use o comando {{command:resume}} para retomar a reprodução.",
-		"paused": "Reprodução pausada."
-	},
-	"resumeCommand": {
-		"commandData": {
-			"description": "Retomar a reprodução atual."
-		},
-		"alreadyResumed": "A reprodução não está pausada. Use o comando {{command:pause}} para pausar a reprodução primeiro.",
-		"resumed": "Reprodução retomada."
-	},
-	"shuffleCommand": {
-		"commandData": {
-			"description": "Embaralhar a fila."
-		},
-		"shuffled": "Fila embaralhada. Você pode usar {{command:unshuffle}} para restaurar a ordem original.",
-		"notEnoughTracks": "Não há músicas suficientes na fila para embaralhar. Use {{command:play}} para adicionar mais músicas."
-	},
-	"unshuffleCommand": {
-		"commandData": {
-			"description": "Desfazer o embaralhamento da fila."
-		},
-		"unshuffled": "Fila restaurada para a ordem original.",
-		"notShuffled": "A fila não está embaralhada."
-	},
-	"clearQueueCommand": {
-		"commandData": {
-			"description": "Limpar a fila."
-		},
-		"notEnoughTracks": "Não há músicas suficientes na fila para limpar. Use {{command:play}} para adicionar mais músicas.",
-		"cleared": "Fila limpa. Você pode usar {{command:unshuffle}} para restaurar a ordem original."
-	},
-	"previousCommand": {
-		"commandData": {
-			"description": "Tocar uma das músicas anteriores.",
-			"nowOption": "Selecione se deseja tocar a música imediatamente ou adicioná-la à fila.",
-			"nextOption": "Selecione se deseja tocar como a próxima música na fila."
-		},
-		"noPreviousSong": "Não há músicas anteriores para tocar.",
-		"trackNotFound": "Não consegui encontrar a música solicitada entre as músicas anteriores."
-	},
-	"removeCommand": {
-		"commandData": {
-			"description": "Remover uma música da fila.",
-			"trackOption": "A música que você deseja remover da fila."
-		},
-		"removed": "Removida **{title}** da fila.",
-		"notInQueue": "A música solicitada não está na fila.",
-		"queueEmpty": "A fila está vazia. Nada para remover."
-	},
-	"volumeCommand": {
-		"commandData": {
-			"description": "Alterar o volume do player.",
-			"volumeOption": "O volume que você deseja definir."
-		},
-		"invalidVolume": "Por favor, forneça um volume válido entre **0** e **{max}**.",
-		"changedVolume": "Volume alterado para **{volume}%**."
-	},
-	"bassboostCommand": {
-		"commandData": {
-			"description": "Ativar ou desativar o filtro de reforço de graves.",
-			"levelOption": "O nível do filtro de reforço de graves.",
-			"offLevel": "Desligado",
-			"highLevel": "Alto",
-			"mediumLevel": "Médio",
-			"lowLevel": "Baixo"
-		},
-		"levelChanged": "Nível do filtro de reforço de graves alterado para **{level}**.",
-		"cleared": "Filtro de reforço de graves removido."
-	},
-	"lowpassCommand": {
-		"commandData": {
-			"description": "Ativar ou desativar o filtro passa-baixas."
-		},
-		"disabled": "Filtro passa-baixas desativado.",
-		"enabled": "Filtro passa-baixas ativado."
-	},
-	"nightcoreCommand": {
-		"commandData": {
-			"description": "Ativar ou desativar o filtro nightcore."
-		},
-		"disabled": "Filtro nightcore desativado.",
-		"enabled": "Filtro nightcore ativado."
-	},
-	"vaporwaveCommand": {
-		"commandData": {
-			"description": "Ativar ou desativar o filtro vaporwave."
-		},
-		"disabled": "Filtro vaporwave desativado.",
-		"enabled": "Filtro vaporwave ativado."
-	},
-	"karaokeCommand": {
-		"commandData": {
-			"description": "Ativar ou desativar o filtro karaokê."
-		},
-		"disabled": "Filtro karaokê desativado.",
-		"enabled": "Filtro karaokê ativado."
-	},
-	"rotationCommand": {
-		"commandData": {
-			"description": "Ativar ou desativar o filtro de rotação."
-		},
-		"disabled": "Filtro de rotação desativado.",
-		"enabled": "Filtro de rotação ativado."
-	},
-	"tremoloCommand": {
-		"commandData": {
-			"description": "Ativar ou desativar o filtro tremolo."
-		},
-		"disabled": "Filtro tremolo desativado.",
-		"enabled": "Filtro tremolo ativado."
-	},
-	"vibratoCommand": {
-		"commandData": {
-			"description": "Ativar ou desativar o filtro vibrato."
-		},
-		"disabled": "Filtro vibrato desativado.",
-		"enabled": "Filtro vibrato ativado."
-	},
-	"replayCommand": {
-		"commandData": {
-			"description": "Reproduzir novamente a música atual."
-		},
-		"replayed": "Reproduzindo novamente **{title}**."
-	},
-	"nowPlayingCommand": {
-		"commandData": {
-			"description": "Obter informações sobre a música atual."
-		},
-		"nowPlaying": "Tocando agora **{title} - {artist}**"
-	},
-	"seekCommand": {
-		"commandData": {
-			"description": "Avançar para uma posição específica na música atual.",
-			"timeOption": "O tempo para o qual deseja avançar."
-		},
-		"invalidTime": "Por favor, forneça um tempo válido.",
-		"timeTooLong": "O tempo fornecido é maior que a duração da música.",
-		"seeked": "Avançado para **{time}**."
-	},
-	"rewindCommand": {
-		"commandData": {
-			"description": "Retroceder a música atual por um tempo específico.",
-			"timeOption": "O tempo que deseja retroceder."
-		},
-		"invalidTime": "Por favor, forneça um tempo válido.",
-		"timeTooShort": "O tempo fornecido é menor que a posição atual da música.",
-		"rewinded": "Retrocedido para **{time}**."
-	},
-	"loopCommand": {
-		"commandData": {
-			"queueDescription": "Repetir toda a fila.",
-			"songDescription": "Repetir a música atual.",
-			"noneDescription": "Desativar a repetição."
-		},
-		"alreadyDisabled": "A repetição já está desativada.",
-		"disabledLoop": "Repetição desativada.",
-		"loopSwitchedFromSong": "Alternado de repetição da música atual para repetição da fila inteira.",
-		"loopQueue": "Repetindo a fila inteira.",
-		"loopSwitchedFromQueue": "Alternado de repetição da fila inteira para repetição da música atual.",
-		"loopSong": "Repetindo a música atual."
-	},
-	"moveCommand": {
-		"commandData": {
-			"description": "Mover uma música para uma nova posição na fila.",
-			"trackOption": "A música que você deseja mover.",
-			"positionOption": "A posição para onde deseja mover a música."
-		},
-		"queueEmpty": "A fila está vazia. Nada para mover.",
-		"trackNotFound": "A música que você solicitou não está na fila.",
-		"invalidPosition": "Por favor, forneça uma posição válida.",
-		"success": "Moveu **{title}** para a posição **{position}**."
-	},
-	"queueCommand": {
-		"commandData": {
-			"description": "Obter informações sobre a fila atual."
-		},
-		"emptyQueue": "A fila está vazia.",
-		"queue": "Fila",
-		"nowPlaying": "Tocando agora",
-		"nextSongs": "Próximas músicas",
-		"footer": "Página {page} de {pages} | Músicas na fila: {tracks} | Duração: {length}",
-		"cacheError": "Esta mensagem da fila é muito antiga e o cache foi limpo. Por favor, use o comando {{command:queue}} novamente."
-	},
-	"playlistCommand": {
-		"commandData": {
-			"descriptionManageOption": "Gerenciar suas playlists.",
-			"descriptionPlayOption": "Reproduzir uma playlist.",
-			"descriptionSearchOption": "Procurar uma playlist.",
-			"descriptionCreateOption": "Criar uma playlist.",
-			"queryOption": "A pesquisa para encontrar uma playlist. (ID ou Nome)",
-			"nameOption": "O nome da playlist."
-		},
-		"embed": {
-			"creator": "**Criada por**: {user}",
-			"songs": "**Músicas**: {count}/{max}",
-			"created": "**Criada em**: {date}",
-			"duration": "**Duração total da playlist**: {duration}"
-		},
-		"songsEmbed": {
-			"title": "Músicas na playlist: **{name}**",
-			"footer": "Página {page} de {pages} | Músicas na playlist: {tracks}"
-		},
-		"playlistSaved": "Playlist salva na sua biblioteca.",
-		"playlistUnsaved": "Playlist removida da sua biblioteca.",
-		"nameTooLong": "O nome da playlist é muito longo. Por favor, forneça um nome com no máximo 50 caracteres.",
-		"invalidName": "Por favor, forneça um nome válido para a playlist.",
-		"tooManyPlaylists": "Você atingiu o número máximo de playlists. Exclua uma para poder criar outra.",
-		"playlistExists": "Já existe uma playlist com o nome **{name}**.",
-		"toxicContent": "O nome da playlist contém conteúdo inadequado. Por favor, escolha outro nome.",
-		"playlistNotFound": "Não encontrei nenhuma playlist com a busca **{query}**.",
-		"noPlaylistsFound": "Nenhuma playlist encontrada.",
-		"deletedPlaylist": "Playlist **{name}** excluída.",
-		"selectUserToTransfere": "Por favor, selecione o usuário para quem deseja transferir a playlist.",
-		"userPlaylistLimit": "O usuário selecionado atingiu o limite de playlists.",
-		"noSpotifyPlaylists": "Você não possui nenhuma playlist do Spotify.",
-		"selectPlaylistToImport": "Por favor, selecione a playlist que deseja importar.",
-		"cannotImportSpotifyPlaylist": "Não posso importar esta playlist do Spotify porque está vazia.",
-		"songAlreadyExists": "A música **{title}** já está nesta playlist.",
-		"songNotExists": "A música **{title}** não está nesta playlist.",
-		"songAddedToPlaylist": "Música **{title}** adicionada à playlist **{playlist}**.",
-		"songRemoveFromPlaylist": "Música **{title}** removida da playlist **{playlist}**.",
-		"cacheError": "Esta mensagem da playlist é muito antiga e o cache foi limpo. Por favor, use o comando {{command:playlist manage}} novamente.",
-		"notEnoughTracksInQueue": "Não há músicas suficientes na fila para criar uma playlist. Use {{command:play}} para adicionar mais músicas.",
-		"private": "Privada",
-		"public": "Pública"
-	},
-	"premiumCommand": {
-		"commandData": {
-			"description": "Obter informações sobre o premium do {botName}."
-		},
-		"response": "Está interessado no premium do {botName}? Você pode obter mais informações no nosso site: <https://betty.bot/premium>"
-	},
-	"profileCommand": {
-		"commandData": {
-			"description": "Obtenha informações sobre seu perfil no {botName}."
-		},
-		"noProfile": "Você ainda não possui dados registrados.",
-		"currently": "Ouvindo atualmente",
-		"lastUpdate": "Última atualização",
-		"commandsUsed": "Comandos usados",
-		"songsPlayed": "Músicas tocadas",
-		"totalPlaytime": "Tempo total de reprodução",
-		"note": "Nota: O tempo de reprodução é calculado com base na duração das músicas que você ouviu.",
-		"notData": "Não há dados para mostrar.",
-		"top5Commands": "Top 5 Comandos Usados",
-		"top5Tracks": "Top 5 Músicas Tocadas",
-		"embedTitle": "Seu perfil do {botName}",
-		"embedTitleOther": "Perfil de {user}",
-		"noSpotifyAccount": "Spotify não conectado",
-		"noSpotifyActivity": "Não está ouvindo nada no Spotify"
-	},
-	"inviteCommand": {
-		"commandData": {
-			"description": "Obtenha o link de convite do {botName}."
-		},
-		"response": "Você pode encontrar todos os links de convite abaixo!"
-	},
-	"creditsCommand": {
-		"commandData": {
-			"description": "Veja os créditos do {botName}."
-		},
-		"response": "**Criado por**: {creator}\n**Agradecimentos especiais a**: {special}"
-	},
-	"historyCommand": {
-		"commandData": {
-			"description": "Obtenha informações sobre as últimas músicas tocadas."
-		},
-		"noProfile": "Você ainda não possui dados registrados.",
-		"noHistory": "Não há histórico para mostrar. Toque algumas músicas com {{command:play}} para gerar um.",
-		"history": "histórico",
-		"footer": "Página {page} de {pages} | Músicas no histórico: {tracks}",
-		"clearedHistory": "Limpou **{tracks}** músicas do seu histórico."
-	},
-	"lyricsCommand": {
-		"commandData": {
-			"description": "Obtenha a letra da música atual ou de qualquer outra.",
-			"songOption": "A música da qual você deseja obter a letra."
-		},
-		"queueEmpty": "A fila está vazia. Nada para buscar a letra.",
-		"noSongGiven": "Você precisa tocar uma música ou fornecer o nome de uma para obter a letra.",
-		"noLyrics": "Não encontrei nenhuma letra para **{title}** de **{artist}**.",
-		"lyrics": "Letra de **{title}** por **{artist}**",
-		"fullLyrics": "Letra Completa"
-	},
-	"recommendCommand": {
-		"commandData": {
-			"description": "Obtenha recomendações de músicas com base no seu histórico de reprodução."
-		},
-		"noRecommendations": "Não encontrei recomendações para você. Tente ouvir mais músicas.",
-		"noProfile": "Você ainda não possui dados registrados. Toque algumas músicas com {{command:play}} para receber recomendações.",
-		"recommendSongSuccessfullyNow": "Comecei a tocar a música recomendada {emoji}[**{title}**]({url} \"Abre a música no seu navegador.\").",
-		"recommendSongsSuccessfully": "Adicionei a música recomendada {emoji}[**{title}**]({url} \"Abre a música no seu navegador.\") à fila na posição **{position}**."
-	},
-	"seeProfileContextCommand": {
-		"commandData": {
-			"name": "Ver Perfil"
-		}
-	},
-	"helpCommand": {
-		"commandData": {
-			"description": "Precisa de ajuda? Use este comando para começar."
-		},
-		"headline": "Configure o Bot",
-		"configurationText": "Para configurar o bot, você precisa visitar o [painel](https://betty.bot/dash/server/{serverId}/{botId}).",
-		"headlineUse": "Como usar o Bot",
-		"useText": "Existem várias maneiras de tocar música:",
-		"useText1": "1. Você pode usar o comando {{command:play}} como multifuncional. Ele permite tocar playlists, faixas ou fazer buscas.",
-		"useText2": "2. Você pode usar o canal de pedidos de música. Basta mencionar o bot e digitar o nome da música ou o link no canal.",
-		"useText3": "3. Você pode usar o comando {{command:search}} para procurar uma música e selecioná-la para tocar ou adicioná-la à fila.",
-		"useText4": "4. Use o menu de contexto **Adicionar à Fila** para adicionar uma música à fila.",
-		"headlinePremium": "Quer mais recursos?",
-		"premiumText": "Você pode obter mais recursos adquirindo o {botName} Premium. Mais informações disponíveis em nosso site: [{botName} Premium](https://betty.bot/premium)",
-		"footer": "Feito por Sean Sattler | sattler.dev"
-	},
-	"configurationCommand": {
-		"commandData": {
-			"description": "Configure o bot para seu servidor."
-		},
-		"response": "Para configurar o bot, você precisa visitar o [painel](https://betty.bot/dash/server/{serverId}/{botId})."
-	},
-	"valueMyMusicCommand": {
-		"commandData": {
-			"description": "Avalie seu gosto musical.",
-			"roastOption": "Selecione se deseja que o {botName} zombe do seu gosto musical ou não."
-		},
-		"noProfile": "Você ainda não possui dados registrados. Toque algumas músicas com {{command:play}} para avaliar seu gosto musical.",
-		"noHistory": "Você precisa ter pelo menos 10 músicas no histórico para avaliar seu gosto musical. Toque algumas músicas com {{command:play}} para gerar dados suficientes.",
-		"error": "Ocorreu um erro ao calcular o valor do seu gosto musical. Tente novamente mais tarde.",
-		"poweredBy": "Fornecido por Google Gemini Pro"
-	},
-	"radioCommand": {
-		"commandData": {
-			"description": "Coloque o {botName} no modo rádio e toque uma rádio online.",
-			"streamOption": "Selecione a rádio que deseja tocar."
-		},
-		"invalidRadio": "Por favor, selecione uma rádio válida.",
-		"fetchError": "Ocorreu um erro ao buscar a rádio. Tente novamente mais tarde.",
-		"startingRadioFromExistingPlayer": "Parando a reprodução atual e mudando para o modo rádio. Tocando **{radio}** do provedor **{hoster}**.",
-		"startingRadio": "Iniciando o modo rádio. Tocando **{radio}** do provedor **{hoster}**.",
-		"stoppedRadio": "Modo rádio interrompido. Voltando ao modo de fila.",
-		"noRadiosFound": "Nenhuma rádio encontrada.",
-		"radioModeDisabled": "O modo rádio está desativado neste servidor. Você pode ativá-lo no painel do bot."
-	},
-	"debugCommand": {
-		"commandData": {
-			"description": "Veja algumas informações de depuração sobre o bot. Pode ser útil para o suporte."
-		}
-	},
-	"addDJContextCommand": {
-		"commandData": {
-			"name": "Adicionar DJ"
-		},
-		"removedDJ": "**{user}** foi removido como DJ.",
-		"maxDJsForNonPremium": "Você atingiu o número máximo de usuários DJ para usuários gratuitos. Você pode adquirir o {botName} Premium em https://betty.bot/premium para aumentar o limite para 25 DJs.",
-		"maxDJs": "Você atingiu o número máximo de DJs.",
-		"addedDJ": "**{user}** foi adicionado como DJ.",
-		"savedHistoryAsPlaylist": "Histórico salvo como playlist com o nome **{name}**."
-	},
-	"skipSongContextCommand": {
-		"commandData": {
-			"name": "Pular Música"
-		}
-	},
-	"addToQueueContextCommand": {
-		"commandData": {
-			"name": "Adicionar à Fila"
-		}
-	},
-	"addSongButton": {
-		"modal": {
-			"playlistTitle": "Adicionar música à playlist",
-			"title": "Adicionar uma música",
-			"queryLabel": "Música para adicionar",
-			"queryPlaceholder": "Digite a música ou link da playlist"
-		}
-	},
-	"renamePlaylistButton": {
-		"modal": {
-			"title": "Renomear playlist",
-			"nameLabel": "Novo nome",
-			"namePlaceholder": "Digite o novo nome"
-		}
-	},
-	"escSelectMenu": {
-		"votedFor": "Você votou com sucesso em {countryflag} **{country}** como o próximo vencedor do Eurovision Song Contest.",
-		"noData": "Algo deu errado ao buscar os dados. Tente novamente mais tarde.",
-		"invalidCountry": "Por favor, selecione um país válido.",
-		"placeholder": "Vote no próximo vencedor do ESC e concorra a um prêmio Premium grátis!",
-		"votingClosedUserDidVote": "A votação para o próximo vencedor do Eurovision Song Contest está encerrada! Assista à final em {date}. Você votou em {countryflag} **{country}**.",
-		"votingClosed": "A votação para o próximo vencedor do Eurovision Song Contest está encerrada! Assista à final em {date}."
-	}
+  "global": {
+    "premiumRequired": "Para usar este recurso, você precisa ter o {botName} Premium neste servidor. Você pode adquiri-lo em https://betty.bot/premium a partir de US$ 2,50!",
+    "premiumQueueLimitReached": "Você atingiu o limite da fila para usuários gratuitos. É possível adicionar até 1500 músicas na fila. Compre o {botName} Premium em https://betty.bot/premium a partir de US$ 2,50 para aumentar o limite para 100 músicas.",
+    "unknownCommand": "Oh não! Não conheço esse comando. Se este erro persistir, contacte o suporte.",
+    "unknownButton": "Oh não! Não conheço esse botão. Se este erro persistir, contacte a assistência.",
+    "unknownSelectMenu": "Oh não! Não conheço esse menu de seleção. Se este erro persistir, contacte a assistência.",
+    "unknownModal": "Oh não! Não conheço esse modal. Se este erro persistir, contacte a assistência.",
+    "unknownError": "Oh não! Algo correu mal. Se este erro persistir, contacte a assistência.",
+    "serverOnly": "Esta funcionalidade só pode ser utilizada em servidores.",
+    "needVoice": "É necessário estar num canal de voz para utilizar esta funcionalidade.",
+    "cannotJoin": "Não consigo entrar nesse canal de voz. Certifique-se de que tenho as permissões corretas e tente novamente.",
+    "noPlayer": "Não há nenhum jogador neste servidor. Usa {{command:join}} para criar um!",
+    "emptyQueue": "A fila de espera está vazia. Use {{command:play}} para adicionar algumas músicas!",
+    "notSameVoiceChannel": "Para utilizar esta funcionalidade, é necessário estar no mesmo canal de voz que eu.",
+    "notInSongRequestChannelUseAble": "Não é possível utilizar este comando dentro do canal de pedido de música.",
+    "botNoPermission": "Não tenho as permissões necessárias para executar esta ação. Preciso da permissão {missingPerms} neste canal. Certifique-se de que tenho as permissões corretas e tente novamente.",
+    "userNoPermission": "Não tem as permissões necessárias para executar esta ação. Precisa da permissão {missingPerms} neste canal.",
+    "djOnly": "Apenas os DJs podem utilizar esta funcionalidade.",
+    "notAllowedToJoinBecauseOfGuildSettings": "Não me é permitido entrar nesse canal de voz devido às definições do servidor.",
+    "cooldownMessage": "Está a arrefecer. Espera {tempo} antes de voltares a utilizar esta funcionalidade.",
+    "poweredBy": "Criado por betty.bot",
+    "invite": "Convite",
+    "support": "Apoio",
+    "website": "Site Web",
+    "subscriptions": "Gerir subscrições",
+    "premium": "Premium",
+    "listenHere": "Ouvir aqui",
+    "nowPlaying": "A reproduzir agora **{songName} - {artist}**",
+    "playing": "A reproduzir {songName} - {artist}",
+    "requestedBy": "Solicitado por {requester}",
+    "nextSong": "A próxima música é **{songName}**",
+    "autoPlayInfo": "Começando a reproduzir músicas recomendadas. Para obter novas recomendações, limpe a fila de espera.",
+    "autoPlayFooter": "Através do Autoplay",
+    "premiumThankYou": "Obrigado por comprar a versão premium do {botName}! Agora pode usar todas as funcionalidades premium em {serverName}!",
+    "premiumThankYouCustomBot": "Obrigado por comprar um bot personalizado para {botName}! Pode começar diretamente com a configuração no painel de controlo!",
+    "premiumPaymentFailed": "Uma das suas subscrições em {botName} falhou devido a um problema de pagamento. Por favor, verifique os seus métodos de pagamento. Como resultado, o seu estatuto de prémio foi removido. Se a próxima tentativa de pagamento for bem sucedida, o seu prémio será restabelecido.",
+    "guildJoinDm": "### Olá!\n\nObrigado por adicionar o {botName} ao seu servidor! 🎉\n\nVamos começar:\n\n- **Personalize o {botName}:** [Painel de Controle](https://betty.bot/dash/{server}/{bot})\n- **Tocar Música:** {{command:play}}\n\nQuer mais do {botName}? Confira o [{botName} Premium](https://betty.bot) para recursos extras!\n\nAproveite!",
+    "nothingFound": "Não consegui encontrar nada para essa pesquisa.",
+    "noPlayerFound": "Não consegui encontrar ou criar um jogador para este servidor. Por favor, tente novamente mais tarde.",
+    "devOnly": "Este bot está atualmente em modo de desenvolvimento e apenas o programador pode utilizar o bot. Por favor, junte-se ao servidor de suporte para mais informações.",
+    "noSpotifyConnection": "Não tens uma conta Spotify ligada a {botName}. Use o comando {{command:spotify login}} para conectar sua conta.",
+    "noTidalConnection": "Não tem uma conta Tidal ligada a {botName}. Use o comando {{command:tidal login}} para ligar a sua conta.",
+    "firstPage": "Primeira página",
+    "previousPage": "Página anterior",
+    "nextPage": "Página seguinte",
+    "lastPage": "Última página",
+    "selectLikeType": "Onde gostaria de adicionar a música à sua lista de favoritos - Discord, Spotify ou Deezer?",
+    "serverBlacklisted": "Este servidor está na lista negra e não pode usar {botName}. Se acha que isto é um erro, por favor contacte o suporte.",
+    "unlikedSong": "Já gostaste da faixa **{title}**, por isso removi-a.",
+    "likedSong": "Gostei da faixa **{título}**.",
+    "boostPremium": "Melhore o seu servidor com premium!",
+    "songAlreadyInQueue": "A música **{title}** já está na fila de espera e, devido às definições do servidor, não a posso adicionar novamente.",
+    "responseEmptyAfterFilter": "Os resultados estão vazios após o filtro de prevenção de músicas duplicadas. Tente novamente com uma consulta diferente.",
+    "serverNotWhitelisted": "Este servidor não está na lista de permissões e não pode usar este bot personalizado de {botName}. Se é o proprietário do bot personalizado, por favor use o painel de controlo para colocar o servidor na lista branca.",
+    "autoPlayAlreadyEnabled": "A funcionalidade de reprodução automática já está activada. Para a desativar, visite o painel de controlo.",
+    "autoPlayEnabled": "A funcionalidade de reprodução automática foi activada. Para a desativar novamente, visite o painel de controlo.",
+    "notMySong": "**Esta não é a tua música? **\nSe o bot não encontrou exatamente a música que queres reproduzir, tenta estas formas:\n1. Tenta adicionar a música pelo link da música. (Ex. do Spotify)\n2. Tenta adicionar a música pelo título - artista. (Ex. Believer - Imagine Dragons)\n3. Tenta encontrar a música com o comando {{command:search}}.",
+    "queueLimitReached": "Atingiu o limite de fila definido de **{limite}** para este servidor. Aguarde até que algumas músicas sejam reproduzidas ou removidas da fila antes de adicionar novas músicas.",
+    "queueUserLimitReached": "Atingiu o limite de fila definido de **{limite}** para si. Aguarde até que algumas músicas sejam reproduzidas ou removidas da fila antes de adicionar novas músicas.",
+    "empty": "Vazio",
+    "noLavalink": "Nenhum servidor de áudio de {botName} está atualmente disponível. Por favor, tente novamente mais tarde. Se este erro persistir, contacte o suporte.",
+    "restartInfo": "O bot foi reiniciado devido a uma atualização. {botName} agora reconecta todos os jogadores existentes. Por favor, espera alguns segundos até o bot estar novamente pronto.",
+    "spotifyWarning": "Uma vez que o {botName} ainda não foi verificado pelo Spotify, a integração do {botName} com o Spotify quase sempre falha porque eles exigem que adicionemos todos os usuários por e-mail e nome completo no painel do desenvolvedor. Isto não é possível para nós devido a razões de privacidade. Estamos a trabalhar numa solução para resolver este problema.",
+    "notAllowedInRadioMode": "Esta funcionalidade não é permitida enquanto o bot estiver no modo rádio.",
+    "nowPlayingRadio": "O bot mudou para o modo rádio. A reproduzir o **{rádio}** do hoster **{hoster}**.",
+    "currentlyPlayingRadio": "Atualmente a reproduzir **{radio}** do anfitrião **{hoster}**."
+  },
+  "nonPremiumTips": {
+    "tip1": "Sabia que pode obter uma melhor qualidade de áudio com o betty premium? <https://betty.bot/premium>",
+    "tip2": "Sabia que pode ligar a sua conta Spotify ao {botName} para importar listas de reprodução facilmente?",
+    "tip3": "Sabia que pode limpar automaticamente a fila de espera se um membro abandonar o canal de voz com {botName} premium? <https://betty.bot/premium>",
+    "tip4": "Sabias que podes obter outro {botName} com premium para o teu servidor? <https://betty.bot/premium>",
+    "tip5": "Sabia que pode impedir a duplicação de músicas na fila de espera com o {botName} premium? <https://betty.bot/premium>",
+    "tip6": "Sabia que pode obter recomendações com base no seu histórico de audição com {{command:recommend}}?",
+    "tip7": "Sabias que {botName} tem um painel de controlo onde podes configurar o bot para o teu servidor? <https://betty.bot/dash>",
+    "tip8": "Sabia que pode ativar uma funcionalidade chamada DJ Temporário? Isto permite que o criador do leitor aceda aos comandos de DJ sem a função de DJ. Configure-o aqui: <https://betty.bot/dash>!",
+    "tip9": "Sabia que pode ter uma interface ligeira para {botName} em canais de voz temporários? Pode activá-la no painel de controlo.",
+    "tip10": "Está a ouvir um som com interrupções ou atrasos no áudio? Compre premium e tenha acesso a servidores de áudio de alta qualidade."
+  },
+  "timeUnits": {
+    "multiple": {
+      "days": "dias",
+      "hours": "horas",
+      "minutes": "minutos",
+      "seconds": "segundos"
+    },
+    "single": {
+      "days": "dia",
+      "hours": "hora",
+      "minutes": "minuto",
+      "seconds": "segundo"
+    }
+  },
+  "buttonLabels": {
+    "support": "Aderir ao servidor de apoio",
+    "customBotDashboard": "Painel de controlo personalizado do bot",
+    "loop": "Loop",
+    "remove": "Remover",
+    "shuffle": "Fila aleatória",
+    "savequeueasplaylist": "Guardar a fila como lista de reprodução",
+    "savehistoryasplaylist": "Guardar o histórico como lista de reprodução",
+    "playhistory": "Histórico de reprodução",
+    "clearhistory": "Limpar histórico",
+    "enableautoplay": "Obter fila de espera infinita, ativar a reprodução automática.",
+    "thatsnotmysong": "Não foi essa a música que pedi?",
+    "playerlogs": "Ver os registos dos jogadores",
+    "addsong": "Adicionar uma música",
+    "stopRadio": "Parar o rádio",
+    "searchOnSpotify": "Pesquisar no Spotify",
+    "playlist": {
+      "manageplaylistsongs": "Gerir / Ver canções",
+      "renameplaylist": "Renomear",
+      "toggleprivateplaylist": "Alternar Privado",
+      "playplaylist": "Reproduzir Lista de reprodução",
+      "deleteplaylist": "Apagar lista de reprodução",
+      "transfareplaylist": "Transfare Playlist",
+      "importspotifyplaylist": "Importar músicas do Spotify",
+      "playlistremovesong": "Selecione as músicas que pretende remover.",
+      "addsongtoplaylist": "Adicionar uma música à lista de reprodução",
+      "backtoplaylist": "Voltar à lista de reprodução",
+      "shareplaylist": "Partilhar lista de reprodução",
+      "saveplaylist": "Guardar lista de reprodução"
+    },
+    "joinchannel": "Junte-se ao seu canal de voz atual"
+  },
+  "destoryReasons": {
+    "inactive": "O jogador foi destruído porque esteve inativo durante muito tempo. Usa {{command:play}} para começar uma nova sessão!",
+    "errored": "O jogador foi destruído devido a um erro. Se esta não for a primeira vez nas últimas 2h, contacta o suporte. Usa {{command:play}} para começar uma nova sessão!",
+    "queueEndWarning": "Não há mais músicas para tocar. Usa {{command:play}} para adicionar mais! Se não forem adicionadas novas faixas, o leitor será destruído em 2 minutos.",
+    "queueEnd": "Não há mais faixas para tocar, o jogador foi destruído. Usa {{command:play}} para começar uma nova sessão!",
+    "kickedFromVoiceChannel": "O jogador foi destruído porque fui expulso do canal de voz. Usa {{command:play}} para começar uma nova sessão!",
+    "emptyVoiceChannelWarning": "Estou sozinho no canal de voz, o jogador será destruído em 2 minutos se ninguém voltar a juntar-se.",
+    "emptyVoiceChannel": "O jogador foi destruído porque o canal de voz ficou vazio. Usa {{command:play}} para começar uma nova sessão!",
+    "notConnected": "Aconteceu algo muito estranho. Embora eu não esteja conectado a um canal de voz, tenho um jogador. Isso não deveria ter acontecido. O jogador foi destruído. Use {{command:play}} para iniciar uma nova sessão!"
+  },
+  "songRequestChannel": {
+    "footer": "Pedido por {username} | Criado por betty.bot",
+    "noSongs": "Não há músicas na fila. Adicione algumas com {{command:play}} ou mencionando o bot e digitando o nome ou o URL neste canal.",
+    "noSongsPlaying": "Não há músicas tocando.",
+    "nextSongs": "Próximas {number} músicas",
+    "nextSong": "Próxima música",
+    "channelName": "pedidos-de-musica",
+    "loadingMessage": "Construindo o canal de pedidos de música...",
+    "emptyQuery": "Por favor, forneça uma consulta válida. Lembre-se de que você precisa me mencionar, caso contrário, não consigo ver sua mensagem.",
+    "topic": {
+      "rewind": "Voltar 10 segundos",
+      "pauseResume": "Pausar/Continuar reprodução",
+      "stop": "Parar",
+      "forward": "Avançar 10 segundos",
+      "skip": "Pular a música atual",
+      "volumeDown": "Volume -10%",
+      "volumeUp": "Volume +10%",
+      "grabSong": "Pegar a música atual",
+      "loopPlayback": "Repetir reprodução",
+      "shuffle": "Embaralhar a fila"
+    },
+    "lightInterfaceTitle": "Interface Leve do {botname}",
+    "lightInterfaceFooter": "O {botName} não interage com nenhuma mensagem enviada neste canal. Você só pode usar os botões para controlar o player."
+  },
+  "supportCommand": {
+    "commandData": {
+      "description": "Obtenha o link para o servidor de suporte."
+    },
+    "response": "Você pode entrar no servidor de suporte aqui: {url}"
+  },
+  "translateCommand": {
+    "commandData": {
+      "description": "Quer nos ajudar a traduzir o {botName} para o seu idioma?"
+    },
+    "response": "Você quer nos ajudar a traduzir o {botName} para o seu idioma? Você pode fazer isso no nosso repositório de traduções no GitHub: [{botName} Translation Repo](https://github.com/fb-sean/betty-music-bot-translations \"Abre o repositório de traduções do {botName} no GitHub\")"
+  },
+  "playCommand": {
+    "commandData": {
+      "description": "Toque uma música ou adicione à fila por link ou nome.",
+      "queryOption": "Sua busca para procurar uma música ou um link para uma música.",
+      "nowOption": "Selecione se deseja tocar a música diretamente ou adicioná-la à fila.",
+      "nextOption": "Selecione se deseja tocar como a próxima música na fila.",
+      "platformOption": "Selecione a plataforma na qual deseja procurar.",
+      "fileOption": "Use esta opção para enviar um arquivo para tocar. O arquivo deve ser um arquivo de áudio válido."
+    },
+    "invalidFile": "O arquivo que você enviou não é um arquivo de áudio válido. Certifique-se de que seja um arquivo mp3 válido e tente novamente.",
+    "playlistNowError": "Você não pode tocar uma playlist diretamente quando já há músicas na fila.",
+    "filePlaySuccessfully": "Arquivo com o nome **{title}** adicionado à fila na posição **{position}**.",
+    "filePlaySuccessfullyNow": "Começou a tocar o arquivo **{title}**.",
+    "trackPlaySuccessfully": "Adicionada {emoji}[**{title}**]({url} \"Abre a música no seu navegador.\") à fila na posição **{position}**.",
+    "trackPlaySuccessfullyNonPremium": "Adicionada {emoji}[**{title}**]({url} \"Abre a música no seu navegador.\") à fila na posição **{position}**. Enquanto espera sua música tocar, que tal votar no {botName}? Isso nos ajuda a crescer e melhorar o bot. [Vote no {botName}](https://top.gg/bot/884800931819048980/vote)",
+    "trackPlaySuccessfullyNow": "Começou a tocar {emoji}[**{title}**]({url} \"Abre a música no seu navegador.\").",
+    "playlistPlaySuccessfully": "Playlist [**{title}**]({url} \"Abre a playlist no seu navegador.\") adicionada à fila.",
+    "playlistPlaySuccessfullyNow": "Começou a tocar a playlist [**{title}**]({url} \"Abre a playlist no seu navegador.\")."
+  },
+  "joinCommand": {
+    "commandData": {
+      "description": "Entrar no canal de voz em que você está."
+    },
+    "success": "Entrei com sucesso em <#{channel}>.",
+    "alreadyConnected": "Já estou conectado a um canal de voz."
+  },
+  "disconnectCommand": {
+    "commandData": {
+      "description": "Desconectar do canal de voz."
+    },
+    "success": "Desconectado com sucesso do canal de voz.",
+    "notConnected": "Não estou conectado a nenhum canal de voz."
+  },
+  "stopCommand": {
+    "commandData": {
+      "description": "Parar o player e limpar a fila."
+    },
+    "success": "Player parado e fila limpa.",
+    "removedVote": "Seu voto para parar o player foi removido.",
+    "addedVote": "Seu voto para parar o player foi adicionado ({votes}/{requiredVotes})."
+  },
+  "switchCommand": {
+    "commandData": {
+      "description": "Mudar de canal de voz."
+    },
+    "success": "Mudei com sucesso de <#{oldChannel}> para <#{newChannel}>.",
+    "notConnected": "Não estou conectado a nenhum canal de voz.",
+    "alreadyInChannel": "Já estou conectado a esse canal."
+  },
+  "searchCommand": {
+    "commandData": {
+      "description": "Procurar uma música e selecioná-la para tocar ou adicioná-la à fila.",
+      "queryOption": "Sua consulta para procurar uma música.",
+      "platformOption": "Selecione a plataforma onde deseja procurar."
+    },
+    "results": "Aqui estão os resultados da pesquisa para **{query}**.\n\n*Use o menu suspenso abaixo para selecionar músicas para reprodução ou adicioná-las à sua fila.*",
+    "selectPlaceholder": "Escolha músicas para tocar imediatamente ou adicionar à sua fila.",
+    "emptyQueueWithErrored": "Comecei a tocar {emoji}[**{title}**]({url} \"Abre a música no navegador\") e adicionei **{added}** músicas à fila, mas não foi possível adicionar **{errored}** músicas.",
+    "emptyQueue": "Comecei a tocar {emoji}[**{title}**]({url} \"Abre a música no navegador\") e adicionei **{added}** músicas à fila.",
+    "successWithErrored": "Adicionei **{added}** músicas à fila, mas não foi possível adicionar **{errored}** músicas.",
+    "success": "Adicionei **{added}** músicas à fila.",
+    "queueAll": "Cauda toda",
+    "resultCount": "Resultados do {count}",
+    "allResults": "Todos os resultados",
+    "cacheError": "Esta mensagem de pesquisa é muito antiga e o cache foi limpo. Use o comando {{command:search}} novamente."
+  },
+  "skipCommand": {
+    "commandData": {
+      "description": "Pular a música atual ou mais músicas.",
+      "skipToOption": "O número de músicas a pular. (Voto para pular não suporta isso!)"
+    },
+    "noSongPlaying": "Não há nenhuma música tocando, então não posso pular nada.",
+    "skippedMultipleSongs": "Pulei com sucesso **{count}** músicas.",
+    "skippedCurrentSong": "Pulei com sucesso **[{title}]({url})**.",
+    "removedVote": "Seu voto para pular a música atual foi removido.",
+    "addedVote": "Seu voto para pular a música atual foi adicionado ({votes}/{requiredVotes}).",
+    "skippingMoreSongsThanQueue": "Você não pode pular mais músicas do que há na fila."
+  },
+  "spotifyCommand": {
+    "commandData": {
+      "description": "Gerencie a conexão da sua conta do Spotify com o {botName}.",
+      "loginOption": "Conectar à sua conta do Spotify.",
+      "logoutOption": "Desconectar da sua conta do Spotify."
+    },
+    "loginLink": "[Clique aqui para conectar sua conta do Spotify ao {botName}.]({url} \"Abre a página de login do Spotify para autenticação com o {botName}\")",
+    "openLinkButton": "Abrir",
+    "logoutSuccess": "Sua conta do Spotify foi desconectada com sucesso.",
+    "loginSuccess": "Sua conta do Spotify foi conectada com sucesso.",
+    "noSpotifyTrack": "Não consegui encontrar uma faixa para essa consulta no Spotify.",
+    "failedLike": "Falha ao curtir a faixa no Spotify. Se o erro persistir, entre em contato com o suporte.",
+    "likedSong": "Curti a faixa **{title}** no Spotify.",
+    "failedRemoveLike": "Falha ao remover o curtir da faixa no Spotify. Se o erro persistir, entre em contato com o suporte.",
+    "alreadyLiked": "Você já tinha curtido a faixa **{title}** no Spotify, então eu removi o curtir."
+  },
+  "tidalCommand": {
+    "commandData": {
+      "description": "Gerencie a conexão da sua conta do Tidal com o {botName}.",
+      "loginOption": "Conectar à sua conta do Tidal.",
+      "logoutOption": "Desconectar da sua conta do Tidal."
+    },
+    "loginLink": "[Clique aqui para conectar sua conta do Tidal ao {botName}.]({url} \"Abre a página de login do Tidal para autenticação com o {botName}\")",
+    "openLinkButton": "Abrir",
+    "logoutSuccess": "Sua conta do Tidal foi desconectada com sucesso.",
+    "loginSuccess": "Sua conta do Tidal foi conectada com sucesso."
+  },
+  "fixCommand": {
+    "commandData": {
+      "description": "Corrigir o player caso ele não esteja funcionando corretamente."
+    },
+    "success": "A região do servidor de voz foi atualizada com sucesso para **Roterdã**, que é a mais próxima do {botName}."
+  },
+  "pauseCommand": {
+    "commandData": {
+      "description": "Pausar a reprodução atual."
+    },
+    "alreadyPaused": "A reprodução já está pausada. Use o comando {{command:resume}} para retomar a reprodução.",
+    "paused": "Reprodução pausada."
+  },
+  "resumeCommand": {
+    "commandData": {
+      "description": "Retomar a reprodução atual."
+    },
+    "alreadyResumed": "A reprodução não está pausada. Use o comando {{command:pause}} para pausar a reprodução primeiro.",
+    "resumed": "Reprodução retomada."
+  },
+  "shuffleCommand": {
+    "commandData": {
+      "description": "Embaralhar a fila."
+    },
+    "shuffled": "Fila embaralhada. Você pode usar {{command:unshuffle}} para restaurar a ordem original.",
+    "notEnoughTracks": "Não há músicas suficientes na fila para embaralhar. Use {{command:play}} para adicionar mais músicas."
+  },
+  "unshuffleCommand": {
+    "commandData": {
+      "description": "Desfazer o embaralhamento da fila."
+    },
+    "unshuffled": "Fila restaurada para a ordem original.",
+    "notShuffled": "A fila não está embaralhada."
+  },
+  "clearQueueCommand": {
+    "commandData": {
+      "description": "Limpar a fila."
+    },
+    "notEnoughTracks": "Não há músicas suficientes na fila para limpar. Use {{command:play}} para adicionar mais músicas.",
+    "cleared": "Fila limpa. Você pode usar {{command:unshuffle}} para restaurar a ordem original."
+  },
+  "previousCommand": {
+    "commandData": {
+      "description": "Tocar uma das músicas anteriores.",
+      "nowOption": "Selecione se deseja tocar a música imediatamente ou adicioná-la à fila.",
+      "nextOption": "Selecione se deseja tocar como a próxima música na fila."
+    },
+    "noPreviousSong": "Não há músicas anteriores para tocar.",
+    "trackNotFound": "Não consegui encontrar a música solicitada entre as músicas anteriores."
+  },
+  "removeCommand": {
+    "commandData": {
+      "description": "Remover uma música da fila.",
+      "trackOption": "A música que você deseja remover da fila."
+    },
+    "removed": "Removida **{title}** da fila.",
+    "notInQueue": "A música solicitada não está na fila.",
+    "queueEmpty": "A fila está vazia. Nada para remover."
+  },
+  "volumeCommand": {
+    "commandData": {
+      "description": "Alterar o volume do player.",
+      "volumeOption": "O volume que você deseja definir."
+    },
+    "invalidVolume": "Por favor, forneça um volume válido entre **0** e **{max}**.",
+    "changedVolume": "Volume alterado para **{volume}%**."
+  },
+  "bassboostCommand": {
+    "commandData": {
+      "description": "Ativar ou desativar o filtro de reforço de graves.",
+      "levelOption": "O nível do filtro de reforço de graves.",
+      "offLevel": "Desligado",
+      "highLevel": "Alto",
+      "mediumLevel": "Médio",
+      "lowLevel": "Baixo"
+    },
+    "levelChanged": "Nível do filtro de reforço de graves alterado para **{level}**.",
+    "cleared": "Filtro de reforço de graves removido."
+  },
+  "lowpassCommand": {
+    "commandData": {
+      "description": "Ativar ou desativar o filtro passa-baixas."
+    },
+    "disabled": "Filtro passa-baixas desativado.",
+    "enabled": "Filtro passa-baixas ativado."
+  },
+  "nightcoreCommand": {
+    "commandData": {
+      "description": "Ativar ou desativar o filtro nightcore."
+    },
+    "disabled": "Filtro nightcore desativado.",
+    "enabled": "Filtro nightcore ativado."
+  },
+  "vaporwaveCommand": {
+    "commandData": {
+      "description": "Ativar ou desativar o filtro vaporwave."
+    },
+    "disabled": "Filtro vaporwave desativado.",
+    "enabled": "Filtro vaporwave ativado."
+  },
+  "karaokeCommand": {
+    "commandData": {
+      "description": "Ativar ou desativar o filtro karaokê."
+    },
+    "disabled": "Filtro karaokê desativado.",
+    "enabled": "Filtro karaokê ativado."
+  },
+  "rotationCommand": {
+    "commandData": {
+      "description": "Ativar ou desativar o filtro de rotação."
+    },
+    "disabled": "Filtro de rotação desativado.",
+    "enabled": "Filtro de rotação ativado."
+  },
+  "tremoloCommand": {
+    "commandData": {
+      "description": "Ativar ou desativar o filtro tremolo."
+    },
+    "disabled": "Filtro tremolo desativado.",
+    "enabled": "Filtro tremolo ativado."
+  },
+  "vibratoCommand": {
+    "commandData": {
+      "description": "Ativar ou desativar o filtro vibrato."
+    },
+    "disabled": "Filtro vibrato desativado.",
+    "enabled": "Filtro vibrato ativado."
+  },
+  "replayCommand": {
+    "commandData": {
+      "description": "Reproduzir novamente a música atual."
+    },
+    "replayed": "Reproduzindo novamente **{title}**."
+  },
+  "nowPlayingCommand": {
+    "commandData": {
+      "description": "Obter informações sobre a música atual."
+    },
+    "nowPlaying": "Tocando agora **{title} - {artist}**"
+  },
+  "seekCommand": {
+    "commandData": {
+      "description": "Avançar para uma posição específica na música atual.",
+      "timeOption": "O tempo para o qual deseja avançar."
+    },
+    "invalidTime": "Por favor, forneça um tempo válido.",
+    "timeTooLong": "O tempo fornecido é maior que a duração da música.",
+    "seeked": "Avançado para **{time}**."
+  },
+  "rewindCommand": {
+    "commandData": {
+      "description": "Retroceder a música atual por um tempo específico.",
+      "timeOption": "O tempo que deseja retroceder."
+    },
+    "invalidTime": "Por favor, forneça um tempo válido.",
+    "timeTooShort": "O tempo fornecido é menor que a posição atual da música.",
+    "rewinded": "Retrocedido para **{time}**."
+  },
+  "loopCommand": {
+    "commandData": {
+      "queueDescription": "Repetir toda a fila.",
+      "songDescription": "Repetir a música atual.",
+      "noneDescription": "Desativar a repetição."
+    },
+    "alreadyDisabled": "A repetição já está desativada.",
+    "disabledLoop": "Repetição desativada.",
+    "loopSwitchedFromSong": "Alternado de repetição da música atual para repetição da fila inteira.",
+    "loopQueue": "Repetindo a fila inteira.",
+    "loopSwitchedFromQueue": "Alternado de repetição da fila inteira para repetição da música atual.",
+    "loopSong": "Repetindo a música atual."
+  },
+  "moveCommand": {
+    "commandData": {
+      "description": "Mover uma música para uma nova posição na fila.",
+      "trackOption": "A música que você deseja mover.",
+      "positionOption": "A posição para onde deseja mover a música."
+    },
+    "queueEmpty": "A fila está vazia. Nada para mover.",
+    "trackNotFound": "A música que você solicitou não está na fila.",
+    "invalidPosition": "Por favor, forneça uma posição válida.",
+    "success": "Moveu **{title}** para a posição **{position}**."
+  },
+  "queueCommand": {
+    "commandData": {
+      "description": "Obter informações sobre a fila atual."
+    },
+    "emptyQueue": "A fila está vazia.",
+    "queue": "Fila",
+    "nowPlaying": "Tocando agora",
+    "nextSongs": "Próximas músicas",
+    "footer": "Músicas na fila: {tracks} | Duração: {length}",
+    "cacheError": "Esta mensagem da fila é muito antiga e o cache foi limpo. Por favor, use o comando {{command:queue}} novamente.",
+    "previous": "Músicas anteriores"
+  },
+  "playlistCommand": {
+    "commandData": {
+      "descriptionManageOption": "Gerenciar suas playlists.",
+      "descriptionPlayOption": "Reproduzir uma playlist.",
+      "descriptionSearchOption": "Procurar uma playlist.",
+      "descriptionCreateOption": "Criar uma playlist.",
+      "queryOption": "A pesquisa para encontrar uma playlist. (ID ou Nome)",
+      "nameOption": "O nome da playlist."
+    },
+    "embed": {
+      "creator": "**Criada por**: {user}",
+      "songs": "**Músicas**: {count}/{max}",
+      "created": "**Criada em**: {date}",
+      "duration": "**Duração total da playlist**: {duration}"
+    },
+    "songsEmbed": {
+      "title": "Músicas na playlist: **{name}**",
+      "footer": "Página {page} de {pages} | Músicas na playlist: {tracks}"
+    },
+    "playlistSaved": "Playlist salva na sua biblioteca.",
+    "playlistUnsaved": "Playlist removida da sua biblioteca.",
+    "nameTooLong": "O nome da playlist é muito longo. Por favor, forneça um nome com no máximo 50 caracteres.",
+    "invalidName": "Por favor, forneça um nome válido para a playlist.",
+    "tooManyPlaylists": "Você atingiu o número máximo de playlists. Exclua uma para poder criar outra.",
+    "playlistExists": "Já existe uma playlist com o nome **{name}**.",
+    "toxicContent": "O nome da playlist contém conteúdo inadequado. Por favor, escolha outro nome.",
+    "playlistNotFound": "Não encontrei nenhuma playlist com a busca **{query}**.",
+    "noPlaylistsFound": "Nenhuma playlist encontrada.",
+    "deletedPlaylist": "Playlist **{name}** excluída.",
+    "selectUserToTransfere": "Por favor, selecione o usuário para quem deseja transferir a playlist.",
+    "userPlaylistLimit": "O usuário selecionado atingiu o limite de playlists.",
+    "noSpotifyPlaylists": "Você não possui nenhuma playlist do Spotify.",
+    "selectPlaylistToImport": "Por favor, selecione a playlist que deseja importar.",
+    "cannotImportSpotifyPlaylist": "Não posso importar esta playlist do Spotify porque está vazia.",
+    "songAlreadyExists": "A música **{title}** já está nesta playlist.",
+    "songNotExists": "A música **{title}** não está nesta playlist.",
+    "songAddedToPlaylist": "Música **{title}** adicionada à playlist **{playlist}**.",
+    "songRemoveFromPlaylist": "Música **{title}** removida da playlist **{playlist}**.",
+    "cacheError": "Esta mensagem da playlist é muito antiga e o cache foi limpo. Por favor, use o comando {{command:playlist manage}} novamente.",
+    "notEnoughTracksInQueue": "Não há músicas suficientes na fila para criar uma playlist. Use {{command:play}} para adicionar mais músicas.",
+    "private": "Privada",
+    "public": "Pública",
+    "new": {
+      "overview": {
+        "createdBy": "Criado por",
+        "play": "Jogar",
+        "playDescription": "Adicione todas as músicas da lista de reprodução {playlistName} à fila.",
+        "markPrivate": "Marca privada",
+        "markPrivateDescription": "Marque a lista de reprodução como privada. Somente você poderá vê-la e usá-la.",
+        "markPublic": "Marca pública",
+        "markPublicDescription": "Marque a lista de reprodução como pública. Todos podem vê-la e usá-la.",
+        "savePlaylist": "Salvar lista de reprodução",
+        "savePlaylistDescription": "Salve a lista de reprodução em sua biblioteca para reproduzi-la a qualquer momento.",
+        "unsavePlaylist": "Cancelar o salvamento da lista de reprodução",
+        "unsavePlaylistDescription": "Remova a lista de reprodução de sua biblioteca.",
+        "rename": "Renomear",
+        "renameDescription": "Renomeie a lista de reprodução com um nome novo. (Lembre-se de que ele precisa ser exclusivo)",
+        "sharePlaylist": "Compartilhar lista de reprodução",
+        "sharePlaylistDescription": "Use este link para compartilhar a lista de reprodução com outros usuários na Betty!",
+        "songsInPlaylist": "Músicas na lista de reprodução: {trackCount}/{maxTracks}"
+      },
+      "dangerZone": {
+        "loseSongs": "Você perderá {trackCount} músicas!",
+        "deletePlaylist": "Excluir lista de reprodução",
+        "deletePlaylistDescription": "Isso excluirá a lista de reprodução sem retorno; tenha cuidado.",
+        "transferPlaylist": "Transferir lista de reprodução",
+        "transferPlaylistDescription": "Transfira a lista de reprodução para outro usuário sem retorno, tenha cuidado."
+      },
+      "songsTitle": "Músicas",
+      "dangerZoneTitle": "Zona de perigo",
+      "share": "Compartilhar",
+      "songs": {
+        "emptyPlaylist": "Esta lista de reprodução está vazia. Você pode adicionar algumas músicas com o botão abaixo.",
+        "songsLength": "Comprimento: {length}",
+        "clearPlaylist": "Limpar lista de reprodução",
+        "importSpotify": "Importar do Spotify",
+        "addSongs": "Adicionar músicas"
+      },
+      "songsInPlaylist": "Músicas na lista de reprodução: {trackCount}/{maxTracks}"
+    }
+  },
+  "premiumCommand": {
+    "commandData": {
+      "description": "Obter informações sobre o premium do {botName}."
+    },
+    "response": "Está interessado no premium do {botName}? Você pode obter mais informações no nosso site: <https://betty.bot/premium>"
+  },
+  "profileCommand": {
+    "commandData": {
+      "description": "Obtenha informações sobre seu perfil no {botName}."
+    },
+    "noProfile": "Você ainda não possui dados registrados.",
+    "currently": "Ouvindo atualmente",
+    "lastUpdate": "Última atualização",
+    "commandsUsed": "Comandos usados",
+    "songsPlayed": "Músicas tocadas",
+    "totalPlaytime": "Tempo total de reprodução",
+    "note": "Nota: O tempo de reprodução é calculado com base na duração das músicas que você ouviu.",
+    "notData": "Não há dados para mostrar.",
+    "top5Commands": "Top 5 Comandos Usados",
+    "top5Tracks": "Top 5 Músicas Tocadas",
+    "embedTitle": "Seu perfil do {botName}",
+    "embedTitleOther": "Perfil de {user}",
+    "noSpotifyAccount": "Spotify não conectado",
+    "noSpotifyActivity": "Não está ouvindo nada no Spotify"
+  },
+  "inviteCommand": {
+    "commandData": {
+      "description": "Obtenha o link de convite do {botName}."
+    },
+    "response": "Você pode encontrar todos os links de convite abaixo!"
+  },
+  "creditsCommand": {
+    "commandData": {
+      "description": "Veja os créditos do {botName}."
+    },
+    "response": "**Criado por**: {creator}\n**Agradecimentos especiais a**: {special}"
+  },
+  "historyCommand": {
+    "commandData": {
+      "description": "Obtenha informações sobre as últimas músicas tocadas."
+    },
+    "noProfile": "Você ainda não possui dados registrados.",
+    "noHistory": "Não há histórico para mostrar. Toque algumas músicas com {{command:play}} para gerar um.",
+    "history": "histórico",
+    "footer": "Página {page} de {pages} | Músicas no histórico: {tracks}",
+    "clearedHistory": "Limpou **{tracks}** músicas do seu histórico."
+  },
+  "lyricsCommand": {
+    "commandData": {
+      "description": "Obtenha a letra da música atual ou de qualquer outra.",
+      "songOption": "A música da qual você deseja obter a letra."
+    },
+    "queueEmpty": "A fila está vazia. Nada para buscar a letra.",
+    "noSongGiven": "Você precisa tocar uma música ou fornecer o nome de uma para obter a letra.",
+    "noLyrics": "Não encontrei nenhuma letra para **{title}** de **{artist}**.",
+    "lyrics": "Letra de **{title}** por **{artist}**",
+    "fullLyrics": "Letra Completa"
+  },
+  "recommendCommand": {
+    "commandData": {
+      "description": "Obtenha recomendações de músicas com base no seu histórico de reprodução."
+    },
+    "noRecommendations": "Não encontrei recomendações para você. Tente ouvir mais músicas.",
+    "noProfile": "Você ainda não possui dados registrados. Toque algumas músicas com {{command:play}} para receber recomendações.",
+    "recommendSongSuccessfullyNow": "Comecei a tocar a música recomendada {emoji}[**{title}**]({url} \"Abre a música no seu navegador.\").",
+    "recommendSongsSuccessfully": "Adicionei a música recomendada {emoji}[**{title}**]({url} \"Abre a música no seu navegador.\") à fila na posição **{position}**."
+  },
+  "seeProfileContextCommand": {
+    "commandData": {
+      "name": "Ver Perfil"
+    }
+  },
+  "helpCommand": {
+    "commandData": {
+      "description": "Precisa de ajuda? Use este comando para começar."
+    },
+    "headline": "Configure o Bot",
+    "configurationText": "Para configurar o bot, você precisa visitar o [painel](https://betty.bot/dash/server/{serverId}/{botId}).",
+    "headlineUse": "Como usar o Bot",
+    "useText": "Existem várias maneiras de tocar música:",
+    "useText1": "1. Você pode usar o comando {{command:play}} como multifuncional. Ele permite tocar playlists, faixas ou fazer buscas.",
+    "useText2": "2. Você pode usar o canal de pedidos de música. Basta mencionar o bot e digitar o nome da música ou o link no canal.",
+    "useText3": "3. Você pode usar o comando {{command:search}} para procurar uma música e selecioná-la para tocar ou adicioná-la à fila.",
+    "useText4": "4. Use o menu de contexto **Adicionar à Fila** para adicionar uma música à fila.",
+    "headlinePremium": "Quer mais recursos?",
+    "premiumText": "Você pode obter mais recursos adquirindo o {botName} Premium. Mais informações disponíveis em nosso site: [{botName} Premium](https://betty.bot/premium)",
+    "footer": "Feito por Sean Sattler | sattler.dev"
+  },
+  "configurationCommand": {
+    "commandData": {
+      "description": "Configure o bot para seu servidor."
+    },
+    "response": "Para configurar o bot, você precisa visitar o [painel](https://betty.bot/dash/server/{serverId}/{botId})."
+  },
+  "valueMyMusicCommand": {
+    "commandData": {
+      "description": "Avalie seu gosto musical.",
+      "roastOption": "Selecione se deseja que o {botName} zombe do seu gosto musical ou não."
+    },
+    "noProfile": "Você ainda não possui dados registrados. Toque algumas músicas com {{command:play}} para avaliar seu gosto musical.",
+    "noHistory": "Você precisa ter pelo menos 10 músicas no histórico para avaliar seu gosto musical. Toque algumas músicas com {{command:play}} para gerar dados suficientes.",
+    "error": "Ocorreu um erro ao calcular o valor do seu gosto musical. Tente novamente mais tarde.",
+    "poweredBy": "Fornecido por Google Gemini Pro"
+  },
+  "radioCommand": {
+    "commandData": {
+      "description": "Coloque o {botName} no modo rádio e toque uma rádio online.",
+      "streamOption": "Selecione a rádio que deseja tocar."
+    },
+    "invalidRadio": "Por favor, selecione uma rádio válida.",
+    "fetchError": "Ocorreu um erro ao buscar a rádio. Tente novamente mais tarde.",
+    "startingRadioFromExistingPlayer": "Parando a reprodução atual e mudando para o modo rádio. Tocando **{radio}** do provedor **{hoster}**.",
+    "startingRadio": "Iniciando o modo rádio. Tocando **{radio}** do provedor **{hoster}**.",
+    "stoppedRadio": "Modo rádio interrompido. Voltando ao modo de fila.",
+    "noRadiosFound": "Nenhuma rádio encontrada.",
+    "radioModeDisabled": "O modo rádio está desativado neste servidor. Você pode ativá-lo no painel do bot."
+  },
+  "debugCommand": {
+    "commandData": {
+      "description": "Veja algumas informações de depuração sobre o bot. Pode ser útil para o suporte."
+    }
+  },
+  "addDJContextCommand": {
+    "commandData": {
+      "name": "Adicionar DJ"
+    },
+    "removedDJ": "**{user}** foi removido como DJ.",
+    "maxDJsForNonPremium": "Você atingiu o número máximo de usuários DJ para usuários gratuitos. Você pode adquirir o {botName} Premium em https://betty.bot/premium para aumentar o limite para 25 DJs.",
+    "maxDJs": "Você atingiu o número máximo de DJs.",
+    "addedDJ": "**{user}** foi adicionado como DJ.",
+    "savedHistoryAsPlaylist": "Histórico salvo como playlist com o nome **{name}**."
+  },
+  "skipSongContextCommand": {
+    "commandData": {
+      "name": "Pular Música"
+    }
+  },
+  "addToQueueContextCommand": {
+    "commandData": {
+      "name": "Adicionar à Fila"
+    }
+  },
+  "addSongButton": {
+    "modal": {
+      "playlistTitle": "Adicionar música à playlist",
+      "title": "Adicionar uma música",
+      "queryLabel": "Música para adicionar",
+      "queryPlaceholder": "Digite a música ou link da playlist"
+    }
+  },
+  "renamePlaylistButton": {
+    "modal": {
+      "title": "Renomear playlist",
+      "nameLabel": "Novo nome",
+      "namePlaceholder": "Digite o novo nome"
+    }
+  },
+  "escSelectMenu": {
+    "votedFor": "Você votou com sucesso em {countryflag} **{country}** como o próximo vencedor do Eurovision Song Contest.",
+    "noData": "Algo deu errado ao buscar os dados. Tente novamente mais tarde.",
+    "invalidCountry": "Por favor, selecione um país válido.",
+    "placeholder": "Vote no próximo vencedor do ESC e concorra a um prêmio Premium grátis!",
+    "votingClosedUserDidVote": "A votação para o próximo vencedor do Eurovision Song Contest está encerrada! Assista à final em {date}. Você votou em {countryflag} **{country}**.",
+    "votingClosed": "A votação para o próximo vencedor do Eurovision Song Contest está encerrada! Assista à final em {date}."
+  }
 }
